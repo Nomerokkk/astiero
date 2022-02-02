@@ -1,0 +1,338 @@
+.patients-item {
+    display: flex;
+    align-items: flex-start;
+    padding: 10px 25px 10px 4px;
+    height: 68px;
+    transition: .3s all ease;
+    position: relative;
+    &.active {
+        height: 233px;
+        padding: 20px 25px 10px 4px;
+        .patients-item {
+            &__img {
+                &-img {
+                    width: 76px;
+                    height: 76px;
+                }
+                &-file {
+                    opacity: 1;
+                    visibility: visible;
+                    transform: none;
+                }
+            }
+            &__col {
+                &--parents,
+                &--date,
+                &--history,
+                &--plans,
+                &--sort {
+                    visibility: visible;
+                    opacity: 1;
+                    transform: none;
+                }
+            }
+        }
+    }
+    .save {
+
+    }
+    &__img {
+        width: 120px;
+        flex-shrink: 0;
+        &-img {
+            width: 48px;
+            height: 48px;
+            margin: 0 auto;
+            transition: .3s all ease;
+            svg {
+                width: 18px;
+                height: 18px;
+            }
+        }
+        &-file {
+            margin: 8px 0 0;
+            text-align: center;
+            display: block;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: .3s all ease;
+            cursor: pointer;
+            &:hover {
+                color: $orange;
+            }
+            input {
+                display: none;
+            }
+        }
+        &-title {
+            font: 700 10px / 1.2 $font;
+        }
+    }
+    &__bl {
+        flex-grow: 1;
+    }
+    &__arrow {
+        fill: $orange;
+        flex-shrink: 0;
+        margin: 0 0 0 16px;
+        cursor: pointer;
+        transition: .3s all ease;
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 5px;
+        &:hover {
+            background: rgba(#000, .05);
+        }
+        &.active {
+            transform: none;
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+        svg {
+            width: 17px;
+            height: 10px;
+            transition: .3s transform ease;
+        }
+    }
+    &__row {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0 -10px;
+    }
+    &__col {
+        width: 25%;
+        padding: 0 10px;
+        margin: 0 0 25px;
+        &--parents,
+        &--date,
+        &--history,
+        &--plans,
+        &--sort {
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(10px);
+            transition: .3s all ease;
+        }
+    }
+    &__label {
+        display: block;
+    }
+    &__title {
+        font: 500 12px / 1 $font;
+        color: #A2A2A2;
+        margin: 0 0 6px;
+    }
+    .input {
+        input {
+            padding: 1px 0 7px;
+            height: 28px;
+        }
+    }
+    .phone {
+        input {
+            padding: 1px 0 3px 7px !important;
+            height: 28px;
+        }
+    }
+    &__select {
+        display: block;
+        position: relative;
+        margin: 12px 0 0;
+        .title-select {
+            height: 22px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: $orange;
+            border-radius: 50px;
+            color: #fff;
+            fill: #fff;
+            font: 700 12px / 1 $font;
+            padding: 0 14px;
+            cursor: pointer;
+            transition: .3s background ease;
+            .current {
+                white-space: nowrap;
+                overflow: hidden;
+                text-overflow: ellipsis;
+            }
+            &:hover {
+                background: $orangeD;
+            }
+            svg {
+                height: 5px;
+                width: 8px;
+                display: block;
+                flex-shrink: 0;
+                transition: .3s transform ease;
+                margin: 0 0 0 5px;
+            }
+        }
+        .list {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            font: 500 12px / 1 $font;
+            width: 100%;
+            padding: 5px 0;
+            box-shadow: 0 10px 10px 0 rgba(#000, .05);
+            z-index: 2;
+            background: #fff;
+            visibility: hidden;
+            opacity: 0;
+            transform: translateY(6px);
+            transition: .3s all ease;
+            border-radius: 5px;
+            max-height: 200px;
+            overflow-y: auto;
+            li {
+                padding: 5px 10px;
+                cursor: pointer;
+                &:hover,
+                &.selected {
+                    color: $orange;
+                    background: rgba(#000, .03);
+                    font-weight: 700;
+                }
+            }
+        }
+        &.open {
+            .title-select {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+            .list {
+                visibility: visible;
+                opacity: 1;
+                transform: none;
+            }
+        }
+    }
+    &__btn {
+        height: 22px;
+        border-radius: 50px;
+        font: 700 12px / 1 $font;
+        padding: 0 14px;
+        margin: 12px 0 0;
+    }
+}
+
+
+.table-patients {
+    .table {
+        &__td {
+            padding: 0 !important;
+        }
+        &__icon {
+            &--minus {
+                transform: none;
+                top: -15px;
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 1200px) {
+    .patients-item {
+        &.active {
+            height: 375px;
+            .patients-item {
+                &__col {
+                    &--email,
+                    &--adress {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: none;
+                    }
+                }
+                &__img {
+                    &-img {
+                        width: 60px;
+                        height: 60px;
+                    }
+                }
+            }
+        }
+        &__col {
+            width: 50%;
+            &--email,
+            &--adress {
+                visibility: hidden;
+                opacity: 0;
+                transform: translateY(10px);
+                transition: .3s all ease;
+            }
+        }
+        &__img {
+            width: 100px;
+            &-title {
+                padding: 0 15px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .patients-item {
+        height: 115px;
+        padding: 22px 20px 10px 4px;
+        &.active {
+            height: 720px;
+            display: block;
+            padding: 9px 20px 10px 20px;
+            .patients-item {
+                &__col {
+                    &--phone {
+                        visibility: visible;
+                        opacity: 1;
+                        transform: none;
+                    }
+                }
+                &__img {
+                    width: 60px;
+                }
+            }
+        }
+        .save {
+            left: unset;
+            top: 10px;
+            right: 10px;
+        }
+        &__img {
+            width: 76px;
+            margin: 0 0 17px;
+            &-title {
+                padding: 0;
+            }
+        }
+        &__col {
+            width: 100%;
+            margin: 0 0 17px;
+            &--phone {
+                visibility: hidden;
+                opacity: 0;
+                transform: translateY(10px);
+                transition: .3s all ease;
+            }
+        }
+        &__arrow {
+            position: absolute;
+            bottom: 0;
+            transform: none;
+            left: 0;
+            margin: 0;
+            width: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 42px;
+        }
+    }
+}

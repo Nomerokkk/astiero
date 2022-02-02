@@ -1,0 +1,12 @@
+.footer {
+    background: $black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    fill: #fff;
+    height: 114px;
+    svg {
+        width: 130px;
+        height: 30px;
+    }
+}

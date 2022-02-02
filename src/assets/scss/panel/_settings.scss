@@ -1,0 +1,81 @@
+.settings {
+    max-width: 982px;
+    margin: 0 auto;
+    &__item {
+        background: #fff;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        margin: 0 0 20px;
+        &--info {
+            padding: 50px 30px 36px;
+        }
+        &--color {
+            padding: 30px;
+        }
+    }
+    &__label-title {
+        font: 500 12px / 1 $font;
+        color: #A2A2A2;
+    }
+    .col {
+        width: 50%;
+        margin: 0 0 40px;
+        &:nth-last-child(-n+2),
+        &:last-child {
+            margin: 0;
+        }
+    }
+    .input {
+        input {
+            font-size: 14px;
+        }
+    }
+    .select {
+        font-size: 14px;
+        .title-select {
+            &:after {
+                width: 12px;
+                height: 7px;
+            }
+        }
+        .list {
+            font-size: 14px;
+        }
+    }
+    &__btn {
+        max-width: 412px;
+        margin: 0 auto;
+    }
+}
+
+
+@media all and (max-width: 1200px) {
+    .settings {
+        &__item {
+            &--info {
+                padding: 30px;
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 767px) {
+    .settings {
+        &__item {
+            &--info {
+                padding: 30px 20px;
+            }
+            &--color {
+                padding: 30px 20px;
+            }
+        }
+        .col {
+            width: 100%;
+            margin: 0 0 27px !important;
+            &:last-child {
+                margin: 0 !important;
+            }
+        }
+    }
+}

@@ -1,0 +1,127 @@
+.air-datepicker {
+    position: absolute;
+    background: #fff;
+    box-shadow: 0 0 10px 0 rgba(#000, .05);
+    z-index: 3;
+    border-radius: 10px;
+    user-select: none;
+    min-width: 260px;
+    left: 50%;
+    top: 100%;
+    @extend .target-hide;
+    transform: translate(-50%, 10px);
+    overflow: hidden;
+    &.show {
+        @extend .target-show;
+        transform: translate(-50%, 0);
+    }
+    &--navigation {
+        background: $orangeD;
+        color: #fff;
+        height: 50px;
+    }
+    &-nav {
+        display: flex;
+        justify-content: space-between;
+        &--action {
+            flex-shrink: 0;
+            cursor: pointer;
+            fill: #fff;
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(#fff, .05);
+            transition: .2s all ease;
+            &:hover {
+                background: $orange;
+                fill: #fff;
+            }
+            svg {
+                width: 10px;
+                height: 8px;       
+            }
+            &[data-action="prev"] {
+                svg {
+                    transform: rotate(90deg);
+                }
+            }
+            &[data-action="next"] {
+                svg {
+                    transform: rotate(-90deg);
+                }
+            }
+        }
+        &--title {
+            font: 500 16px / 1 $font;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            transition: .2s background ease;
+            &:hover {
+                background: rgba(#fff, .1);
+            }
+            i {
+                font-style: normal;
+            }
+        }
+    }
+    &-body {
+        font-size: 15px;
+        &--day {
+            &-names {
+                display: flex;
+                background: rgba(#000, .04);
+            }
+            &-name {
+                width: 14.28%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                height: 40px;
+                font-weight: 700;
+            }
+        }
+        &--cells {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    &-cell {
+        width: 14.28%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 32px;
+        cursor: pointer;
+        transition: .1s background ease;
+        font-size: 14px;
+        font-weight: 500;
+        &:hover {
+            background: rgba(#000, .05);
+        }
+        &.-other-month- {
+            background: $orangeS;
+            color: rgba(#000, .6);
+        }
+        &.-current- {
+            background: $black;
+            color: #fff;
+            font-weight: 700;
+        }
+        &.-selected- {
+            background: $orange;
+            color: #fff;
+            font-weight: 700;
+        }
+        &.-month-,
+        &.-year- {
+            width: 25%;
+        }
+    }
+    .-hidden- {
+        display: none;
+    }
+}

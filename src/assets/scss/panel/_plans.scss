@@ -1,0 +1,14 @@
+.plans {
+    &__td-save {
+        padding-left: 50px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .plans {
+        &__td-save {
+            padding-left: 10px;
+            padding-top: 35px;
+        }
+    }
+}

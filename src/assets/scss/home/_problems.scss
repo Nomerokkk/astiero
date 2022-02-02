@@ -1,0 +1,201 @@
+.problems {
+    padding: 62px 0 74px;
+    &__wrapper {
+        display: flex;
+        justify-content: space-around;
+        flex-wrap: wrap;
+        margin: 30px 0 0;
+    }
+    &__col {
+        width: 370px;
+        position: relative;
+        &:nth-child(1) {
+            .problems {
+                &__icon {
+                    img {
+                        width: 70px;
+                        height: 72px;
+                    }
+                }
+                &__title {
+                    color: $orange;
+                }
+            }
+        }
+        &:nth-child(2) {
+            .problems {
+                &__icon {
+                    img {
+                        width: 64px;
+                        height: 64px;
+                    }
+                }
+                &__title {
+                    color: #34D64E;
+                }
+            }
+        }
+    }
+    &__logo {
+        position: absolute;
+        width: 80px;
+        height: 346px;
+        fill: rgba(#000, .03);
+        right: 100%;
+        margin: 0 50px 0 0;
+        bottom: -20px;
+        svg {
+            width: 346px;
+            height: 80px;
+            max-width: unset;
+            transform: translateX(-100%) rotate(-90deg);
+            transform-origin: 100% 0;
+        }
+        &-bg {
+            width: 47px;
+            height: 315px;
+            background: left top / contain no-repeat;
+            position: absolute;
+            left: 100%;
+            margin-left: -3px;
+            top: 10px;
+        }
+    }
+    &__top {
+        background: linear-gradient(to right, #FAFAFA, rgba(250, 250, 250, 0));
+        height: 94px;
+        display: flex;
+        align-items: center;
+        padding: 0 46px;
+        margin: 0 0 36px;
+    }
+    &__icon {
+        margin: 0 19px 0 0;
+    }
+    &__title {
+        font: 700 30px $font;
+    }
+    &__list {
+        font: 700 20px $font;
+        max-width: 370px;
+        margin: 0 0 0 46px;
+        li {
+            margin: 24px 0 0;
+            &:first-child {
+                margin: 0;
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 1200px) {
+    .problems {
+        padding: 60px 0 56px;
+        .title {
+            text-align: center;
+        }
+        &__wrapper {
+            max-width: 800px;
+            margin: 30px auto 0;
+        }
+        &__col {
+            width: 320px;
+        }
+        &__logo {
+            width: 50px;
+            height: 217px;
+            bottom: 32px;
+            margin: 0 20px 0 0;
+            svg {
+                height: 50px;
+                width: 217px;
+            }
+            &-bg {
+                width: 30px;
+                height: 225px;
+                top: -10px;
+            }
+        }
+        &__top {
+            margin: 0 0 20px;
+            padding: 0 34px;
+        }
+        &__list {
+            font-size: 16px;
+            li {
+                margin: 20px 0;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 992px) {
+    .problems {
+        &__col {
+            &:nth-child(1) {
+                .problems {
+                    &__list {
+                        padding-right: 60px;
+                    }
+                }
+            }
+        }
+        &__list {
+            margin: 0;
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .problems {
+        padding: 33px 0 25px;
+        &__wrapper {
+            flex-wrap: wrap;
+            margin: 15px 0 0;
+        }
+        &__col {
+            width: 100%;
+            &:nth-child(1) {
+                margin: 0 0 10px;
+                .problems {
+                    &__icon {
+                        img {
+                            width: 47px;
+                            height: 48px;
+                        }
+                    }
+                }
+            }
+            &:nth-child(2) {
+                .problems {
+                    &__icon {
+                        img {
+                            width: 40px;
+                            height: 40px;
+                        }
+                    }
+                }
+            }
+        }
+        &__top {
+            height: 66px;
+            padding: 0 10px;
+            margin: 0 0 16px;
+        }
+        &__icon {
+            margin: 0 30px 0 0;
+        }
+        &__title {
+            font-size: 25px;
+        }
+        &__list {
+            font-size: 14px;
+            max-width: 100%;
+            padding: 0 !important;
+            li {
+                margin: 15px 0;
+            }
+        }
+    }
+}

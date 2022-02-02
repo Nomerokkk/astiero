@@ -1,0 +1,77 @@
+.target-hide {
+    transition: .3s all ease;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+}
+.target-show {
+    visibility: visible;
+    opacity: 1;
+    transform: none;
+    pointer-events: all;
+}
+
+.no-margin {
+    &:first-child {
+        margin-top: 0;
+    }
+    &:last-child {
+        margin-bottom: 0;
+    }
+}
+
+.fit-cover {
+    object-fit: cover;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+.fit-contain {
+    object-fit: contain;
+    object-position: center;
+    width: 100%;
+    height: 100%;
+}
+
+
+.link {
+    position: relative;
+    display: inline-flex;
+    &:after {
+        content: '';
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 0;
+        background: #fff;
+        position: absolute;
+        transition: .3s all ease;
+    }
+    &:hover {
+        &:after {
+            width: 100%;
+        }
+    }
+}
+
+.link2 {
+    position: relative;
+    display: inline-flex;
+    &:after {
+        content: '';
+        bottom: 0;
+        left: 0;
+        height: 1px;
+        width: 100%;
+        background: #fff;
+        position: absolute;
+        transition: .3s all ease;
+    }
+    &:hover {
+        &:after {
+            width: 0;
+        }
+    }
+}

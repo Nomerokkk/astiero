@@ -1,0 +1,55 @@
+@import '../_global.scss';
+
+@import '_banner.scss';
+
+
+.check {
+    display: block;
+    cursor: pointer;
+    user-select: none;
+    input {
+        display: none;
+        &:checked + .check__bl {
+            .check__svg {
+                svg {
+                    opacity: 1;
+                }
+            }
+        }
+        &.error + .check__bl {
+            color: red;
+        }
+    }
+    &__bl {
+        display: flex;
+        align-items: center;
+        transition: .3s color ease;
+    }
+    &__svg {
+        width: 26px;
+        height: 26px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        fill: $orange;
+        border: 1px solid $orange;
+        border-radius: 5px;
+        margin: 0 11px 0 0;
+        flex-shrink: 0;
+        svg {
+            width: 15px;
+            height: 11px;
+            transition: .3s all ease;
+            opacity: 0;
+        }
+    }
+    &__title {
+        font: 500 14px / 1 $font;
+    }
+}
+
+@import '../_footer.scss';
+
+@import '../_modal.scss';
+
+@import '../_msg.scss';

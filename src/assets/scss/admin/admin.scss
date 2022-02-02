@@ -1,0 +1,335 @@
+@import '../_global.scss';
+
+@import '../_menup.scss';
+
+@import '../_global-panel-admin.scss';
+
+.admin {
+    padding: 55px 0 0;
+    &__row {
+        margin: 0 -15px;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    &__col {
+        padding: 0 15px;
+        width: 50%;
+        margin: 0 0 34px;
+        &--full {
+            width: 100%;
+        }
+        &--img {
+            width: 258px;
+            flex-shrink: 0;
+        }
+        &--img-right {
+            flex-grow: 1;
+        }
+    }
+    &__btns {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin: 20px 0 0;
+        &--one {
+            justify-content: center;
+        }
+        .add-btn {
+            width: 255px;
+            padding: 0 20px;
+        }
+        &-submit {
+            width: 350px;
+        }
+    }
+}
+
+.accordion {
+    border-bottom: 1px solid rgba(#000, .05);
+    &.active {
+        display: block;
+    }
+    &--pink {
+       .accordion {
+           &__top {
+               &-inner {
+                   &.active {
+                       background: $orangeS;
+                   }
+               }
+           }
+            &__content {
+                &.active {
+                    background: $orangeS;               
+                }
+                .input {
+                    input {
+                        border-color: #fff;
+                        &:focus {
+                            border-color: $black;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    &:last-child {
+        border: 0;
+    }
+    &__top {
+        height: 90px;
+        position: relative;
+        &-inner {
+            height: 100%;
+            padding: 0 30px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            transition: .3s background ease;
+            cursor: pointer;
+            &.active {
+                svg {
+                    transform: rotate(180deg);
+                }
+            }
+        }
+        .minus {
+            position: absolute;
+            top: 50%;
+            right: 64px;
+            transform: translateY(-50%);
+        }
+    }
+    &__title {
+        font: 700 20px / 1 $font;
+        flex-grow: 1;
+        height: 100%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        transition: .3s color ease;
+        padding-right: 40px;
+        &:hover {
+            color: $orange;
+        }
+    }
+    &__arrow {
+        fill: $black;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin: 0 0 0 15px;
+        cursor: pointer;
+        transition: .3s;
+        &:hover {
+            background: rgba(#000, .05);
+        }
+        svg {
+            width: 17px;
+            height: 10px;
+            transition: .3s all ease;
+        }
+    }
+    &__content {
+        padding: 0 30px 6px;
+        display: none;
+        transition: .3s background ease;
+        &.active {
+            display: block;
+        }
+    }
+    .add-btn {
+        margin: 0 0 28px;
+    }
+}
+
+.label {
+    margin: 0 0 34px;
+    display: block;
+    &:last-child {
+        margin: 0;
+    }
+    &__title {
+        font: 700 18px / 1 $font;
+        margin: 0 0 2px;
+        display: block;
+        &--small {
+            font-size: 16px;
+        }
+    }
+    .input {
+        input {
+            padding: 0;
+            height: 50px;
+        }
+        textarea {
+            padding: 16px 0;
+            height: auto;
+            min-height: 50px;
+        }
+        &--small {
+            input,
+            textarea {
+                font-size: 14px;
+            }
+        }
+        .minus {
+            position: absolute;
+            right: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            + input,
+            + textarea {
+                padding-right: 40px;
+            }
+        }
+    }
+}
+
+.label-img {
+    height: 230px;
+    position: relative;
+    &__img {
+        height: 100%;
+        position: relative;
+        background: rgba(#000, .3);
+        &:before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(#000, .35);
+        }
+        img {
+            @extend .fit-contain;
+        }
+    }
+    &__title {
+        position: absolute;
+        bottom: 22px;
+        left: 0;
+        width: 100%;
+        z-index: 2;
+        font: 700 18px / 1.2 $font;
+        padding: 0 10px;
+        text-align: center;
+        color: #fff;
+    }
+    &__nav {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        z-index: 1;
+    }
+    &__link {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        fill: #fff;
+        width: 30px;
+        height: 30px;
+        transition: .2s;
+        &:hover {
+            background: rgba(#fff, .2);
+        }
+    }
+    &__delete {
+        &:hover {
+            background: $orange;
+        }
+        svg {
+            width: 15px;
+            height: 18px;
+        }
+    }
+    &__edit {
+        svg {
+            width: 13px;
+            height: 13px;
+        }
+        input {
+            display: none;
+        }
+    }
+}
+
+
+@media all and (max-width: 1200px) {
+    .admin {
+        padding: 48px 0 0;
+        &__btns {
+            &-submit {
+                width: 255px;
+            }
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .admin {
+        padding: 33px 0 0;
+        &__col {
+            margin: 0 0 30px;
+            width: 100%;
+        }
+        &__btns {
+            flex-wrap: wrap;
+            .btn {
+                width: 100%;
+                margin: 15px 0 0;
+                &:first-child {
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    .accordion {
+        &__top {
+            height: 70px;
+            &-inner {
+                padding: 0 20px;
+            }
+        }
+        &__title {
+            font-size: 18px;
+        }
+        &__content {
+            padding: 0 20px;
+        }
+    }
+
+    .label-img {
+        height: 150px;
+        &__title {
+            bottom: 16px;
+        }
+    }
+}
+
+@import '../panel/_tabs.scss';
+
+@import '_start.scss';
+
+@import '_users.scss';
+
+@import '_prices.scss';
+
+
+// settings
+@import '../panel/_info.scss';
+
+@import '_settings.scss';
+
+@import '../panel/_pickr.scss';
+
+@import '_footer.scss';
+
+@import '../_modal.scss';
+
+@import '../_msg.scss';

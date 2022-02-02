@@ -1,0 +1,203 @@
+.info {
+    max-width: 982px;
+    margin: 0 auto;
+    padding: 33px 38px 45px !important;
+    position: relative;
+    background: #fff;
+    box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    &--modal {
+        display: none;
+    }
+    &__long {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 212px;
+        font-size: 16px;
+        padding: 0 30px;
+    }
+    &__top {
+        display: flex;
+        align-items: center;
+        &-text {
+            flex-grow: 1;
+        }
+    }
+    &__title-modal {
+        font: 700 35px / 1.2 $font;
+        text-transform: uppercase;
+        position: absolute;
+        color: #fff;
+        bottom: 100%;
+        left: 0;
+        padding: 0 0 10px;
+    }
+    &__title {
+        font: 24px / 1 $font;
+        margin: 0 0 18px;
+        padding: 0 220px 0 0;
+    }
+    &__file {
+        display: inline-flex;
+        cursor: pointer;
+        &:hover {
+            .info__file-title {
+                &:after {
+                    width: 0;
+                }
+            }
+        }
+        input {
+            display: none;
+        }
+        &-text {
+            display: inline-flex;
+            align-items: baseline;
+        }
+        &-title {
+            @extend .link2;
+            font: 14px / 1.2 $font;
+            color: $orange;
+            margin: 0 10px 0 0;
+            &:after {
+                background: $orange;
+            }
+        }
+        &-format {
+            font: 700 14px / 1.2 $font;
+            color: #A3A3A3;
+        }
+    }
+    &__img {
+        margin: 0 26px 0 0;
+        width: 105px;
+        height: 105px;
+        svg {
+            width: 42px;
+            height: 50px;
+        }
+    }
+    &__inputs {
+        margin-left: 131px;
+        margin-top: -20px;
+    }
+    &__row {
+        display: flex;
+        align-items: flex-end;
+        flex-wrap: wrap;
+        margin: 0 -23px;
+    }
+    &__col {
+        width: 50%;
+        padding: 0 23px;
+        margin: 0 0 24px;
+        &--btn {
+            margin: 24px 0 0;
+        }
+    }
+    .input {
+        input {
+            font-weight: 400;
+            &::placeholder {
+                color: #A2A2A2;
+            }
+        }
+    }
+    .phone {
+        font-weight: 400;
+        input {
+            font-weight: 400;
+        }
+    }
+    .select {
+        .title-select {
+            color: #A2A2A2;
+        }
+    }
+    &__date-title {
+        font: 18px $font;
+        margin: 0 0 5px;
+    }
+    &__select {
+        display: flex;
+        margin: 0 -7px;
+        &-col {
+            width: 33.333%;
+            padding: 0 7px;
+        }
+    }
+}
+
+
+
+
+@media all and (max-width: 992px) {
+    .info {
+        padding: 40px 50px !important;
+        &__long {
+            right: 50px;
+            top: 58px;
+        }
+        &__inputs {
+            margin: 10px 0 0;
+        }
+        &__row {
+            margin: 0 -10px;
+        }
+        &__col {
+            padding: 0 10px;
+        }
+    }
+
+    .info-page {
+        .info {
+            margin: 0 -50px;
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .info {
+        padding: 20px 15px 30px !important;
+        &__long {
+            display: none;
+        }
+        &__img {
+            width: 65px;
+            height: 65px;
+            margin: 0 11px 0 0;
+            svg {
+                width: 26px;
+                height: 32px;
+            }
+        }
+        &__title-modal {
+            font-size: 20px;
+            padding: 0 0 18px;
+        }
+        &__title {
+            font-size: 16px;
+            padding: 0;
+            margin: 0 0 12px;
+        }
+        &__inputs {
+            margin: 24px 0 0;
+        }
+        &__col {
+            width: 100%;
+            &--btn {
+                margin: 20px 0 0;
+                &:first-child {
+                    margin: 2px 0 0;
+                }
+            }
+        }
+    }
+
+    .info-page {
+        .info {
+            margin: 0 -15px;
+        }
+    }
+}

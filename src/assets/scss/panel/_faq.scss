@@ -1,0 +1,53 @@
+.faq {
+    &__item {
+        background: #fff;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.1);
+        border-radius: 15px;
+        margin: 0 0 30px;
+        @extend .no-margin;
+    }
+    &__title {
+        font: 700 20px / 1 $font;
+        height: 80px;
+        padding: 0 28px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        fill: $orange;
+        cursor: pointer;
+        transition: .3s color ease;
+        &:hover {
+            color: $orange;
+        }
+        &.active {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+        svg {
+            height: 13px;
+            width: 22px;
+            transition: .3s transform ease;
+            margin-left: 15px;
+        }
+    }
+    &__desc {
+        padding: 0 28px 20px;
+        font: 300 16px / 1.4 $font;
+        display: none;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .faq {
+        &__item {
+            margin: 0 0 20px;
+        }
+        &__title {
+            padding: 0 20px;
+        }
+        &__desc {
+            padding: 0 20px 20px;
+        }
+    }
+}

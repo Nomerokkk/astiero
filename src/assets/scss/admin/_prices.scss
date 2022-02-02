@@ -1,0 +1,13 @@
+.prices {
+    &__bl {
+        background: #fff;
+        box-shadow: 0px 10px 50px rgba(#000, .1);
+        border-radius: 15px;
+        overflow: hidden;
+    }
+    &__btn {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+}

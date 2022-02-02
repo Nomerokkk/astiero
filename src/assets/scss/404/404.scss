@@ -1,0 +1,32 @@
+@import '../_global.scss';
+
+.page404 {
+    background: #FDFDFD;
+    padding: 80px 0;
+    &__img {
+        display: flex;
+        justify-content: center;
+    }
+    .title {
+        max-width: 468px;
+        margin: 0 auto;
+        b {
+            color: inherit;
+        }
+    }
+    &__btn {
+        margin: 38px auto 0;
+        max-width: 360px;
+    }
+}
+
+@media all and (max-width: 767px) {
+    .page404 {
+        padding: 50px 0;
+        &__btn {
+            margin: 25px auto 0;
+        }
+    }
+}
+
+@import '../_footer.scss';

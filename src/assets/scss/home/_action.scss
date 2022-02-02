@@ -1,0 +1,122 @@
+.action {
+    background: linear-gradient(206deg, $orange, $orangeL);
+    position: relative;
+    color: #fff;
+    &__bg {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: left top / auto 100% no-repeat;
+    }
+    &__bg2 {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: right top / auto 100% no-repeat;
+        z-index: 1;
+    }
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        position: relative;
+        z-index: 2;
+    }
+    &__title {
+        font: 35px $font;
+        b {
+            font-weight: 900;
+        }
+    }
+    &__desc {
+        font: 20px $font;
+        margin: 17px 0 0;
+    }
+    &__form {
+        max-width: 540px;
+        width: 100%;
+        padding: 40px 46px 55px;
+        background: linear-gradient(271.6deg, $orange, $orangeD);
+        &-title {
+            font: 900 25px $font;
+            margin: 0 0 16px;
+        }
+        &-btn {
+            margin: 20px 0 0;
+        }
+    }
+}
+
+
+@media all and (max-width: 1200px) {
+    .action {
+        .container {
+            padding-right: 0;
+        }
+        &__bg {
+            left: -240px;
+        }
+        &__bg2 {
+            display: none;
+        }
+        &__text {
+            padding-right: 30px;
+            max-width: 340px;
+        }
+        &__title {
+            font-size: 27px;
+        }
+        &__desc {
+            font-size: 16px;
+        }
+        &__form {
+            width: 50%;
+            flex-shrink: 0;
+            padding: 45px 50px 45px 20px;
+            &-title {
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+
+@media all and (max-width: 767px) {
+    .action {
+        padding: 34px 0 0;
+        .container {
+            padding: 0;
+        }
+        &__bg {
+            width: 100%;
+            left: 0;
+            background: left -200px top;
+        }
+        &__wrapper {
+            flex-wrap: wrap;
+        }
+        &__text {
+            max-width: 100%;
+            width: 100%;
+            padding: 0 15px;
+            margin: 0 0 30px;
+        }
+        &__title {
+            font-size: 25px;
+        }
+        &__desc {
+            font-size: 20px;
+            margin: 10px 0 0;
+        }
+        &__form {
+            width: auto;
+            flex-grow: 1;
+            padding: 35px 15px;
+            max-width: 100%;
+        }
+    }
+}

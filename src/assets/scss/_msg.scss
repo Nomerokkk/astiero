@@ -1,0 +1,49 @@
+.panel-message {
+    position: fixed;
+    top: 140px;
+    right: 0;
+    z-index: 100000;
+    display: none;
+    font: 700 20px / 1 $font;
+    &__item {
+        height: 70px;
+        display: flex;
+        align-items: center;
+        font-weight: 700;
+        margin-bottom: 28px;
+        animation-duration: .5s !important;
+        transition: .3s background ease;
+        cursor: pointer;
+        user-select: none;
+		color: #fff;
+        border-radius: 15px 0 0 15px;
+        background: #34D64E;
+        visibility: hidden;
+        opacity: 0;
+        width: 284px;
+        &--error {
+            background: $orange;
+            &:hover {
+                background: $orangeD !important;
+            }
+        }
+		&:hover {
+			background: #27a33b;
+		}
+    }
+    span {
+        width: 60px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+		position: relative;
+        flex-shrink: 0;
+    }
+	&__inner {
+		position: relative;
+		z-index: 1;
+		display: flex;
+		align-items: center;
+	}
+
+}
