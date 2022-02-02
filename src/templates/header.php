@@ -97,7 +97,7 @@ $target = '../assets';
 							<div class="lang__menu" id="lang">
 								<ul class="lang__list">
 									<li>
-										<a href="#">
+										<a href="#" class="lang__item">
 											<div class="lang__img">
 												<img src="<?= $target; ?>/img/lang/en.svg" alt="">
 											</div>
@@ -107,7 +107,7 @@ $target = '../assets';
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="#" class="lang__item">
 											<div class="lang__img">
 												<img src="<?= $target; ?>/img/lang/uk.svg" alt="">
 											</div>
@@ -278,7 +278,7 @@ $target = '../assets';
 							<div class="lang__menu" id="lang">
 								<ul class="lang__list">
 									<li>
-										<a href="#">
+										<a href="#" class="lang__item">
 											<div class="lang__img">
 												<img src="<?= $target; ?>/img/lang/en.svg" alt="">
 											</div>
@@ -288,7 +288,7 @@ $target = '../assets';
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="#" class="lang__item">
 											<div class="lang__img">
 												<img src="<?= $target; ?>/img/lang/uk.svg" alt="">
 											</div>
@@ -420,7 +420,7 @@ $target = '../assets';
 							<div class="lang__menu" id="lang">
 								<ul class="lang__list">
 									<li>
-										<a href="#">
+										<a href="#" class="lang__item">
 											<div class="lang__img">
 												<img src="<?= $target; ?>/img/lang/en.svg" alt="">
 											</div>
@@ -430,7 +430,7 @@ $target = '../assets';
 										</a>
 									</li>
 									<li>
-										<a href="#">
+										<a href="#" class="lang__item">
 											<div class="lang__img">
 												<img src="<?= $target; ?>/img/lang/uk.svg" alt="">
 											</div>
@@ -567,7 +567,7 @@ $target = '../assets';
 					<div class="lang__menu" id="lang">
 						<ul class="lang__list">
 							<li>
-								<a href="#">
+								<a href="#" class="lang__item">
 									<div class="lang__img">
 										<img src="<?= $target; ?>/img/lang/en.svg" alt="">
 									</div>
@@ -577,7 +577,7 @@ $target = '../assets';
 								</a>
 							</li>
 							<li>
-								<a href="#">
+								<a href="#" class="lang__item">
 									<div class="lang__img">
 										<img src="<?= $target; ?>/img/lang/uk.svg" alt="">
 									</div>

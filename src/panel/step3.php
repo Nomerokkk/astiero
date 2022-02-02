@@ -319,7 +319,7 @@ include '../templates/header.php'; ?>
 
                                                 <? } ?>
 
-                                                <? for($i = 1; $i < 33; $i++) {                                                     
+                                                <!-- <? for($i = 1; $i < 33; $i++) {                                                     
                                                     $border = $target . '/img/jaw/border/normal/' . $i . '.svg';
                                                     $tooth = $target . '/img/jaw/teeth/normal/' . $i . '.svg';
 
@@ -337,7 +337,7 @@ include '../templates/header.php'; ?>
                                                         <div class="visual"></div>
                                                     </div>
 
-                                                <? } ?>
+                                                <? } ?> -->
 
                                                 
                                             </div>

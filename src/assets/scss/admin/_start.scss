@@ -1,4 +1,26 @@
 .start {
+    &__lang {
+        display: flex;
+        margin: 20px -7px;
+        &-item {
+            display: flex;
+            align-items: center;
+            padding: 0 15px;
+            cursor: pointer;
+            height: 50px;
+            border-radius: 50px;
+            transition: .1s all ease;
+            margin: 0 7px;
+            &:hover,
+            &.active {
+                background: rgba(#000, .05);
+            }
+        }
+        &-img {
+            flex-shrink: 0;
+            margin: 0 10px 0 0;
+        }
+    }
     &__tab-area {
         display: none;
         transition: .3s opacity ease;
@@ -56,6 +78,14 @@
 
 @media all and (max-width: 767px) {
     .start {
+        &__lang {
+            &-name {
+                display: none;
+            }
+            &-img {
+                margin: 0;
+            }
+        }
         &__tabs {
             margin: 0 -15px 10px;
             &:after {

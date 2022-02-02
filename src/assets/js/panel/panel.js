@@ -265,8 +265,6 @@ $(function() {
                 if(left + $active_item.width() > width) {
                     $this.scrollLeft(left);
                 }
-                console.log(width);
-                console.log(left);
             }
         });
     }
