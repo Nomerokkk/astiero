@@ -1,9 +1,10 @@
+
 $('.j-pickr').each(function(e) {
 	let $this = $(this),
 		color = $this.data('color'),
 		variable = $this.data('var');
 	
-	const pickr = new Pickr({
+	let pickr = new Pickr({
 		el: $this[0],
 		default: color,
 		theme: 'nano',
@@ -28,17 +29,8 @@ $('.j-pickr').each(function(e) {
 	})
 
 	$('.j-reset-settings').on('click', function() {
-		$('.j-pickr').each(function(e) {
-			let $this = $(this),
-				color_old = $this.attr('data-color');
+		$this.val(color);
 		
-	
-			// $this.trigger('cancel');
-			// $this.closest('.j-settings-color').css('background', color_old);
-			
-			$this.val(color_old);
-	
-			pickr.setColor(color_old);
-		});
+		pickr.setColor(color);
 	});
 });
