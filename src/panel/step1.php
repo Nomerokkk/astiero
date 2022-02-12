@@ -51,13 +51,6 @@ include '../templates/header.php'; ?>
                             <div class="steps__list-item">
                                 <div class="steps__list-number">04</div>
                                 <div class="steps__list-title">
-                                    Этапы лечения
-                                </div>
-                            </div>
-                            <div class="steps__list-line"></div>
-                            <div class="steps__list-item">
-                                <div class="steps__list-number">05</div>
-                                <div class="steps__list-title">
                                     Генерация плана
                                 </div>
                             </div>

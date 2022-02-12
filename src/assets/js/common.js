@@ -313,7 +313,7 @@ $(function() {
 
 /*******************PHONES********************/
 function init_phones(el) {
-	intlTelInput(el, {
+	let iti = intlTelInput(el, {
 		initialCountry: 'auto',
 		preferredCountries: ['ua', 'ru', 'us'],
 		separateDialCode: true,
@@ -327,22 +327,32 @@ function init_phones(el) {
 			});
 		},
 		customPlaceholder: function(selectedCountryPlaceholder, selectedCountryData) {
-			var mask = selectedCountryPlaceholder.replace(/[0-9]/g, '_');
+			let placeholder = selectedCountryPlaceholder.replace(/[0-9]/g, '_');
 
-			return mask;
+			return placeholder;
 		},
 		
 	});
 
 	el.addEventListener('countrychange', function() {
-		setTimeout(function() {
-			var $this = $(el),
-				placeholder = $this.attr('placeholder'),
-				mask = placeholder.replace(/[_]/g, '9');
+		let $this = $(el);
 
+		$this.inputmask('remove');
+		$this.val('');
+		$this.removeClass('mask-added');
+	});
+
+	$(el).on('input', function() {
+		let $this = $(el),
+			placeholder = $this.attr('placeholder'),
+			mask = placeholder.replace(/[_]/g, '9');
+			
+		if(!$this.is('.mask-added')) {
 			$this.val('');
 			$this.inputmask(mask);
-		}, 400);
+
+			$this.addClass('mask-added')
+		}
 	});
 }
 

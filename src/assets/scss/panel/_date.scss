@@ -58,8 +58,10 @@
             cursor: pointer;
             display: flex;
             align-items: center;
+            justify-content: center;
             padding: 0 15px;
             transition: .2s background ease;
+            flex-grow: 1;
             &:hover {
                 background: rgba(#fff, .1);
             }

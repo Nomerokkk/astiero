@@ -710,3 +710,74 @@ select.j-select {
     padding: 6px 15px;
     z-index: 2;
 }
+
+
+.button-close {
+    position: relative;
+    min-width: 132px;
+    &:hover,
+    &.active {
+        .button-close {
+            &__btn {
+                background: $orange;
+                color: #fff;
+            }
+        }
+    }
+    &__btn {
+        height: 22px;
+        padding: 0 15px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        font: 700 12px / 1 $font;
+        background: #fff;
+        border-radius: 50px;
+        border: 1px solid $orange;
+        color: $orange;
+        transition: .2s all ease;
+        cursor: pointer;
+    }
+    &__close {
+        width: 14px;
+        height: 14px;
+        background: $black;
+        fill: #fff;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        position: absolute;
+        top: -7px;
+        right: -3px;
+        &:hover {
+            svg {
+                transform: rotate(180deg);
+            }
+        }
+        svg {
+            width: 8px;
+            height: 8px;
+            transition: .3s transform ease;
+        }
+    }
+}
+
+@media all and (max-width: 1200px) {
+    .button-close {
+        &__close {
+            width: 20px;
+            height: 20px;
+            top: -12px;
+            right: -8px;
+        }
+    }
+}
+
+@media all and (max-width: 767px) {
+    .button-close {
+        min-width: 100px;
+    }
+}

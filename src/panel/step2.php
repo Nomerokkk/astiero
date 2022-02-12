@@ -51,13 +51,6 @@ include '../templates/header.php'; ?>
                             <div class="steps__list-item">
                                 <div class="steps__list-number">04</div>
                                 <div class="steps__list-title">
-                                    Этапы лечения
-                                </div>
-                            </div>
-                            <div class="steps__list-line"></div>
-                            <div class="steps__list-item">
-                                <div class="steps__list-number">05</div>
-                                <div class="steps__list-title">
                                     Генерация плана
                                 </div>
                             </div>
@@ -309,11 +302,53 @@ include '../templates/header.php'; ?>
                                             <div class="jaw__teeth">
 
                                                 <!-- TOP JAW -->
-                                                <? for($i = 1; $i < 33; $i++) {                                                     
+                                                <? $i = 0;
+
+                                                $teeth = [
+                                                    0 => '18',
+                                                    1 => '17',
+                                                    2 => '16',
+                                                    3 => '15',
+                                                    4 => '14',
+                                                    5 => '13',
+                                                    6 => '12',
+                                                    7 => '11',
+
+                                                    8 => '21',
+                                                    9 => '22',
+                                                    10 => '23',
+                                                    11 => '24',
+                                                    12 => '25',
+                                                    13 => '26',
+                                                    14 => '27',
+                                                    15 => '28',
+
+                                                    16 => '48',
+                                                    17 => '47',
+                                                    18 => '46',
+                                                    19 => '45',
+                                                    20 => '44',
+                                                    21 => '43',
+                                                    22 => '42',
+                                                    23 => '41',
+
+                                                    24 => '31',
+                                                    25 => '32',
+                                                    26 => '33',
+                                                    27 => '34',
+                                                    28 => '35',
+                                                    29 => '36',
+                                                    30 => '37',
+                                                    31 => '38',
+                                                ];
+                                                
+                                                foreach($teeth as $item) {  
+                                                    $i++;
+
                                                     $border = $target . '/img/jaw/border/normal/' . $i . '.svg';
                                                     $tooth = $target . '/img/jaw/teeth/normal/' . $i . '.svg';
 
-                                                    $title = $i . '-й зуб';
+                                                    $title = $item . '-й зуб';
                                                 ?>
 
                                                     <div class="jaw-item jaw-item--<?= $i; ?> j-jaw-item <?= ($i > 16) ? 'jaw-item--bottom' : ''; ?>" 
@@ -349,9 +384,11 @@ include '../templates/header.php'; ?>
                                 </div>
                                 <ul class="step-diagnostic__list">
                                     <li>
-                                        <div class="step-diagnostic__list-item active">
-                                            Кариес - 32
-                                            <div class="step-diagnostic__list-close" data-fancybox data-src="#ok-remove" data-tooltip="Удалить">
+                                        <div class="button-close active">
+                                            <div class="button-close__btn">
+                                                Кариес - 32
+                                            </div>
+                                            <div class="button-close__close" data-fancybox data-src="#ok-remove" data-tooltip="Удалить">
                                                 <svg>
                                                     <use xlink:href="<?= $target; ?>/img/icons.svg#close"/>
                                                 </svg>
@@ -359,9 +396,11 @@ include '../templates/header.php'; ?>
                                         </div>
                                     </li>
                                     <li>
-                                        <div class="step-diagnostic__list-item">
-                                            Пульпит - 32
-                                            <div class="step-diagnostic__list-close" data-fancybox data-src="#ok-remove" data-tooltip="Удалить">
+                                        <div class="button-close">
+                                            <div class="button-close__btn">
+                                                Пульпит - 32
+                                            </div>
+                                            <div class="button-close__close" data-fancybox data-src="#ok-remove" data-tooltip="Удалить">
                                                 <svg>
                                                     <use xlink:href="<?= $target; ?>/img/icons.svg#close"/>
                                                 </svg>

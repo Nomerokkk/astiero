@@ -1,3 +1,5 @@
+@import '../../libs/fancybox/jquery.fancybox.min.css';
+
 .fancybox__slide {
     padding: 64px 15px !important;
 }
@@ -313,6 +315,16 @@
             &__desc {
                 margin: 22px 0 35px;
                 font: 300 25px / 1.2 $font;
+            }
+        }
+    }
+    &--extend {
+        .modal {
+            &__title {
+                margin: 0 0 15px;
+            }
+            &__btn {
+                margin: 30px 0 0;
             }
         }
     }

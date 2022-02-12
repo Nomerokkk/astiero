@@ -12,7 +12,7 @@ include 'templates/header.php'; ?>
                             <img src="<?= $target; ?>/img/logo-white.svg" alt="">
                         </div>
                         <div class="banner__title title-overflow">
-                            <h1 class="banner__title-inner j-wow j-wow-up">БЕСПЛАТНЫЙ ПЕРИОД <u>30 ДНЕЙ</u></h1>
+                            <a href="#" class="banner__title-inner j-wow j-wow-up">БЕСПЛАТНЫЙ ПЕРИОД <u>30 ДНЕЙ</u></a>
                         </div>
                         <p class="banner__desc j-wow j-wow-up" data-delay=".2">
                             Более 1300 пациентов используют нас. Присоединяйтесь!

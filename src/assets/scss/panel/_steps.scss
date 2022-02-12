@@ -2,7 +2,7 @@
     &__list {
         &-inner {
             display: flex;
-            justify-content: center;
+            justify-content: space-between;
             align-items: center;
             padding: 0 0 30px;
             position: relative;
@@ -13,6 +13,7 @@
         &-item {
             display: flex;
             align-items: center;
+            flex-shrink: 0;
             &.done {
                 cursor: pointer;
                 .steps__list {
@@ -56,10 +57,11 @@
         }
         &-line {
             height: 1px;
-            width: 26px;
+            min-width: 26px;
             background: $black;
             flex-shrink: 0;
-            margin: 0 14px;
+            flex-grow: 1;
+            margin: 0 20px;
         }
         &-progress {
             height: 5px;
@@ -68,7 +70,7 @@
             position: absolute;
             left: 0;
             bottom: 0;
-            width: 36%;
+            width: 43%;
         }
     }
 }
@@ -246,6 +248,9 @@
     border-radius: 15px;
     position: relative;
     overflow: hidden;
+    position: sticky;
+    top: 96px;
+    left: 0;
     &__loader {
         background: $black;
         position: absolute;
@@ -362,59 +367,13 @@
         li {
             padding: 3px;
         }
-        &-item {
-            height: 22px;
-            padding: 0 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-            font: 700 12px / 1 $font;
-            min-width: 132px;
-            background: #fff;
-            border-radius: 50px;
-            border: 1px solid $orange;
-            color: $orange;
-            transition: .2s all ease;
-            position: relative;
-            cursor: pointer;
-            &:hover,
-            &.active {
-                background: $orange;
-                color: #fff;
-            }
-        }
-        &-close {
-            width: 14px;
-            height: 14px;
-            background: $black;
-            fill: #fff;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            position: absolute;
-            top: -7px;
-            right: -3px;
-            &:hover {
-                svg {
-                    transform: rotate(180deg);
-                }
-            }
-            svg {
-                width: 8px;
-                height: 8px;
-                transition: .3s transform ease;
-            }
-        }
     }
 }
 
 .step-plan {
     background: $orangeS;
     border-radius: 15px;
-    padding: 26px 40px 20px;
+    padding: 20px 30px;
     &__title {
         font: 700 20px / 1.2 $font;
         margin: 16px 0 0;
@@ -531,7 +490,7 @@
 
 .step-stage {
     &__items {
-        margin: 26px 0 0;
+        margin: 20px 0 0;
     }
     &__item {
         background: $orangeS;
@@ -603,7 +562,7 @@
         }
     }
     &__bl {
-        padding: 0 30px 34px;
+        padding: 0 30px 25px;
         display: none;
         &.active {
             display: block;
@@ -666,6 +625,9 @@
                 height: 6px;
             }
         }
+    }
+    &__textarea {
+        margin: 20px 0 0;
     }
     &__btn {
         margin: 58px 0 0;
@@ -957,17 +919,6 @@
         }
     }
 
-    .step-diagnostic {
-        &__list {
-            &-close {
-                width: 20px;
-                height: 20px;
-                top: -12px;
-                right: -8px;
-            }
-        }
-    }
-
     .step-plan {
         &__item {
             &-close {
@@ -1086,11 +1037,6 @@
 
     .step-diagnostic {
         padding: 15px 20px 20px;
-        &__list {
-            &-item {
-                min-width: 100px;
-            }
-        }
     }
 
     .step-plan {

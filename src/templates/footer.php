@@ -248,15 +248,11 @@
 		<script src="<?= $target; ?>/libs/date/air-datepicker.js"></script>
 		<script src="<?= $target; ?>/js/panel/panel.js"></script>
 		<script src="<?= $target; ?>/js/panel/jaw.js"></script>
-		<script src="<?= $target; ?>/libs/pickr.min.js"></script>
-		<script src="<?= $target; ?>/js/colors.js"></script>
 	<? } ?>
 
 	<? if($page == 'admin') { ?>
 		<script src="<?= $target; ?>/libs/jquery.nice-select.min.js"></script>
 		<script src="<?= $target; ?>/js/panel/panel.js"></script>
-		<script src="<?= $target; ?>/libs/pickr.min.js"></script>
-		<script src="<?= $target; ?>/js/colors.js"></script>
 	<? } ?>
 
 </body>

@@ -13,14 +13,14 @@ include '../templates/header.php'; ?>
                             </a>
                         </li>
                         <li>
-                            Этапы лечения
+                            Генерация плана
                         </li>
                     </ul>
                 </div>
                 <div class="panel__top panel__top--center">
                     <div class="title-overflow">
                         <h1 class="title j-wow j-wow-up">
-                            Этапы лечения
+                            Генерация плана
                         </h1>
                     </div>
                 </div>
@@ -51,17 +51,10 @@ include '../templates/header.php'; ?>
                             <div class="steps__list-item active">
                                 <div class="steps__list-number">04</div>
                                 <div class="steps__list-title">
-                                    Этапы лечения
-                                </div>
-                            </div>
-                            <div class="steps__list-line"></div>
-                            <div class="steps__list-item">
-                                <div class="steps__list-number">05</div>
-                                <div class="steps__list-title">
                                     Генерация плана
                                 </div>
                             </div>
-                            <div class="steps__list-progress" style="width: 77.4%;"></div>
+                            <div class="steps__list-progress" style="width: 100%;"></div>
                         </div>
                     </div>
                 </div>
@@ -85,211 +78,157 @@ include '../templates/header.php'; ?>
                             </div>
                         </div>
                         <div class="step__col">
-                            <div class="step-stage">
-                                <div class="step__title">
-                                    Этапы посещения
+                            <div class="step-last">
+                                <div class="step-last__top">
+                                    <div class="step-last__avatar avatar avatar--white">
+                                        <svg>
+                                            <use xlink:href="<?= $target; ?>/img/icons.svg#user"/>
+                                        </svg>
+                                    </div>
+                                    <div class="step-last__top-text">
+                                        <div class="step-last__top-title">
+                                            Иван Иванов
+                                        </div>
+                                        <label class="step-last__top-label">
+                                            <input type="file">
+                                            <div class="step-last__top-label-title">
+                                                Загрузить фото
+                                            </div>
+                                        </label>
+                                    </div>
                                 </div>
-                                <div class="step-stage__items">
-                                    <div class="step-stage__item">
-                                        <div class="minus" data-fancybox data-src="#ok-remove" data-tooltip="Удалить">-</div>
-                                        <div class="step-stage__top active" data-toggle="#stage1">
-                                            <div class="step-stage__top-title">
+                                <div class="step-last__progress">
+                                    <div class="step-last__progress-line" style="width: 50%;">
+                                        50% пройдено этапов
+                                    </div>
+                                </div>
+                                <div class="step-last__items">
+                                    <div class="step-last__item">
+                                        <div class="step-last__item-top">
+                                            <div class="step-last__item-title active" data-toggle="#item1">
                                                 Этап 1
                                             </div>
-                                            <div class="step-stage__top-date">
-                                                12.08.2021 13:00
-                                            </div>
-                                            <div class="step-stage__top-arrow">
-                                                <svg>
-                                                    <use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
-                                                </svg>
+                                            <div class="step-last__item-nav">
+                                                <label class="step-last__item-label">
+                                                    <input type="checkbox">
+                                                    <div class="step-last__item-label-title">
+                                                        <div class="step-last__item-label-check">
+                                                            <svg>
+                                                                <use xlink:href="<?= $target; ?>/img/icons.svg#check"/>
+                                                            </svg>
+                                                        </div>
+                                                        Пройдено
+                                                    </div>
+                                                </label>
+                                                <div class="step-last__item-arrow active" data-toggle="#item1">
+                                                    <svg>
+                                                        <use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="step-stage__bl active" id="stage1">
-                                            <div class="step-stage__row">
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Зуб:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            <select multiple="multiple" data-placeholder="Выберите" name="zoob" class="select j-select step-stage__select">
-                                                                <option value="32" selected>32</option>
-                                                                <option value="13" selected>13</option>
-                                                            </select>
-                                                        </div>
+                                        <div class="step-last__item-inner active" id="item1">
+                                            <ul class="step-last__item-list">
+                                                <li>
+                                                    Зуб: <b>36</b>
+                                                </li>
+                                                <li>
+                                                    Диагностика: <b>Пульпит</b>
+                                                </li>
+                                                <li>
+                                                    Лечение: <b>Пломба</b>
+                                                </li>
+                                                <li>
+                                                    Посещений: <b>2</b>
+                                                </li>
+                                            </ul>
+                                            <ul class="step-last__item-dates">
+                                                <li>
+                                                    <div class="step-last__item-date">
+                                                        12.08.2021
                                                     </div>
-                                                </div>
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Диагностика:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            Пульпит
-                                                        </div>
+                                                </li>
+                                                <li>
+                                                    <div class="step-last__item-date">
+                                                        13:00
                                                     </div>
-                                                </div>
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Лечение:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            Пломба
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Посещений:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            <div class="input">
-                                                                <input type="number" placeholder="2" min="1">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Дата визита:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            <label class="input input--date">
-                                                                <input type="text" placeholder="__.__.__" class="j-date" readonly>
-                                                                <svg>
-                                                                    <use xlink:href="<?= $target; ?>/img/icons.svg#date"/>
-                                                                </svg>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Время:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            <select class="select j-select step-stage__select">
-                                                                <option value="13:00">13:00</option>
-                                                                <option value="14:00">14:00</option>
-                                                                <option value="15:00">15:00</option>
-                                                                <option value="16:00">16:00</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
-                                    <div class="step-stage__item">
-                                        <div class="minus" data-fancybox data-src="#ok-remove" data-tooltip="Удалить">-</div>
-                                        <div class="step-stage__top" data-toggle="#stage2">
-                                            <div class="step-stage__top-title">
-                                                Этап 2
+                                    <div class="step-last__item">
+                                        <div class="step-last__item-top">
+                                            <div class="step-last__item-title" data-toggle="#item2">
+                                                Этап 1
                                             </div>
-                                            <div class="step-stage__top-date">
-                                                12.08.2021 13:00
-                                            </div>
-                                            <div class="step-stage__top-arrow">
-                                                <svg>
-                                                    <use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
-                                                </svg>
+                                            <div class="step-last__item-nav">
+                                                <label class="step-last__item-label">
+                                                    <input type="checkbox">
+                                                    <div class="step-last__item-label-title">
+                                                        <div class="step-last__item-label-check">
+                                                            <svg>
+                                                                <use xlink:href="<?= $target; ?>/img/icons.svg#check"/>
+                                                            </svg>
+                                                        </div>
+                                                        Пройдено
+                                                    </div>
+                                                </label>
+                                                <div class="step-last__item-arrow" data-toggle="#item2">
+                                                    <svg>
+                                                        <use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
+                                                    </svg>
+                                                </div>
                                             </div>
                                         </div>
-                                        <div class="step-stage__bl" id="stage2">
-                                            <div class="step-stage__row">
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Зуб:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            <select multiple="multiple" data-placeholder="Выберите" name="zoob" class="select j-select step-stage__select">
-                                                                <option value="32" selected>32</option>
-                                                                <option value="13" selected>13</option>
-                                                            </select>
-                                                        </div>
+                                        <div class="step-last__item-inner" id="item2">
+                                            <ul class="step-last__item-list">
+                                                <li>
+                                                    Зуб: <b>36</b>
+                                                </li>
+                                                <li>
+                                                    Диагностика: <b>Пульпит</b>
+                                                </li>
+                                                <li>
+                                                    Лечение: <b>Пломба</b>
+                                                </li>
+                                                <li>
+                                                    Посещений: <b>2</b>
+                                                </li>
+                                            </ul>
+                                            <ul class="step-last__item-dates">
+                                                <li>
+                                                    <div class="step-last__item-date">
+                                                        12.08.2021
                                                     </div>
-                                                </div>
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Диагностика:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            Пульпит
-                                                        </div>
+                                                </li>
+                                                <li>
+                                                    <div class="step-last__item-date">
+                                                        13:00
                                                     </div>
-                                                </div>
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Лечение:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            Пломба
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Посещений:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            <div class="input">
-                                                                <input type="number" placeholder="2" min="1">
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Дата визита:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            <label class="input input--date">
-                                                                <input type="text" placeholder="__.__.__" class="j-date" readonly>
-                                                                <svg>
-                                                                    <use xlink:href="<?= $target; ?>/img/icons.svg#date"/>
-                                                                </svg>
-                                                            </label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                                <div class="step-stage__col">
-                                                    <div class="step-stage__label">
-                                                        <div class="step-stage__label-title">
-                                                            Время:
-                                                        </div>
-                                                        <div class="step-stage__label-val">
-                                                            <select class="select j-select step-stage__select">
-                                                                <option value="13:00">13:00</option>
-                                                                <option value="14:00">14:00</option>
-                                                                <option value="15:00">15:00</option>
-                                                                <option value="16:00">16:00</option>
-                                                            </select>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
+                                                </li>
+                                            </ul>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                            <div class="step__nav">
-                                <div class="step__nav-col">
-                                    <div class="btn btn--border">Создать визит</div>
+                            <div class="step__nav-last">
+                                <div class="step__nav-last-col">
+                                    <button type="button" class="btn btn--orange" data-fancybox data-src="#send-email">
+                                        Отправить по E-mail
+                                    </button>
+                                </div>
+                                <div class="step__nav-last-col">
+                                    <button type="button" class="btn btn--border" data-fancybox data-src="#send-phone">
+                                        Отправить по телефону
+                                    </button>
                                 </div>
                             </div>
-                            <button type="submit" class="step-stage__btn step__btn btn btn--orange">
-                                Далее
-                            </button>
+                            <a href="#" target="_blank" class="step-last__btn step__btn btn btn--pink">
+                                Скачать PDF файл
+                                <svg>
+                                    <use xlink:href="<?= $target; ?>/img/icons.svg#pdf"/>
+                                </svg>
+                            </a>
                         </div>
                     </div>
                 </form>
@@ -321,6 +260,34 @@ include '../templates/header.php'; ?>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div class="modal modal--password" id="send-email">
+        <form class="modal__inner j-form" action="pdf-ok.php">
+            <div class="modal__title">
+                Отправить по e-mail
+            </div>
+            <div class="input">
+                <input type="email" placeholder="E-mail" data-required>
+            </div>
+            <button type="submit" class="btn btn--orange modal__btn">
+                Отправить
+            </button>
+        </form>
+    </div>
+
+    <div class="modal modal--password" id="send-phone">
+        <form class="modal__inner j-form" action="pdf-ok.php">
+            <div class="modal__title">
+                Отправить по телефону
+            </div>
+            <div class="phone phone--pink">
+                <input type="tel" class="j-phone" data-required>
+            </div>
+            <button type="submit" class="btn btn--orange modal__btn">
+                Отправить
+            </button>
+        </form>
     </div>
 
 <? include '../templates/footer.php'; ?>

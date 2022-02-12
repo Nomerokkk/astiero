@@ -112,16 +112,6 @@ include '../templates/header.php'; ?>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div class="patients-item__col patients-item__col--parents">
-                                                <div class="patients-item__label">
-                                                    <div class="patients-item__title">
-                                                        Родственные связи
-                                                    </div>
-                                                    <div class="input">
-                                                        <input type="text" value="Николай Николаевич ">    
-                                                    </div>
-                                                </div>
-                                            </div>
                                             <div class="patients-item__col patients-item__col--date">
                                                 <div class="patients-item__label">
                                                     <div class="patients-item__title">
@@ -161,6 +151,45 @@ include '../templates/header.php'; ?>
                                                     </div>
                                                     <div class="input">
                                                         <input type="number" min="1" value="1" data-required>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="patients-item__col patients-item__col--parents">
+                                                <div class="patients-item__parents">
+                                                    <div class="patients-item__parents-col">
+                                                        <div class="patients-item__label">
+                                                            <div class="patients-item__title">
+                                                                Родственные связи
+                                                            </div>
+                                                            <select class="patients-item__select j-select">
+                                                                <option value="Мама">Мама</option>
+                                                                <option value="Папа">Папа</option>
+                                                                <option value="Брат">Брат</option>
+                                                                <option value="Друг">Друг</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>    
+                                                    <div class="patients-item__parents-col">
+                                                        <div class="button-close">
+                                                            <div class="button-close__btn">
+                                                                Мама
+                                                            </div>
+                                                            <div class="button-close__close" data-fancybox data-src="#ok-remove" data-tooltip="Удалить">
+                                                                <svg>
+                                                                    <use xlink:href="<?= $target; ?>/img/icons.svg#close"/>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
+                                                        <div class="button-close">
+                                                            <div class="button-close__btn">
+                                                                Папа
+                                                            </div>
+                                                            <div class="button-close__close" data-fancybox data-src="#ok-remove" data-tooltip="Удалить">
+                                                                <svg>
+                                                                    <use xlink:href="<?= $target; ?>/img/icons.svg#close"/>
+                                                                </svg>
+                                                            </div>
+                                                        </div>
                                                     </div>
                                                 </div>
                                             </div>

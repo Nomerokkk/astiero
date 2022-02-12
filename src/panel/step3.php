@@ -51,17 +51,10 @@ include '../templates/header.php'; ?>
                             <div class="steps__list-item">
                                 <div class="steps__list-number">04</div>
                                 <div class="steps__list-title">
-                                    Этапы лечения
-                                </div>
-                            </div>
-                            <div class="steps__list-line"></div>
-                            <div class="steps__list-item">
-                                <div class="steps__list-number">05</div>
-                                <div class="steps__list-title">
                                     Генерация плана
                                 </div>
                             </div>
-                            <div class="steps__list-progress" style="width: 56%;"></div>
+                            <div class="steps__list-progress" style="width: 70.2%;"></div>
                         </div>
                     </div>
                 </div>
@@ -362,14 +355,14 @@ include '../templates/header.php'; ?>
                                     </li>
                                     <li>
                                         <div class="step-plan__list-item">
-                                            Пульпит - 32
+                                            Пульпит - 29
                                         </div>
                                     </li>
                                 </ul>
-                                <div class="step-plan__title">
+                                <!-- <div class="step-plan__title">
                                     План лечения
-                                </div>
-                                <div class="step-plan__items">
+                                </div> -->
+                                <!-- <div class="step-plan__items">
                                     <div class="step-plan__item">
                                         <div class="step-plan__item-number">
                                             32
@@ -412,12 +405,214 @@ include '../templates/header.php'; ?>
                                             </div>
                                         </div>
                                     </div>
+                                </div> -->
+                            </div>
+                            <div class="step-stage">
+                                <div class="step__title">
+                                    Этапы посещения
                                 </div>
-                                <textarea rows="3" class="step__textarea" placeholder="Описание"></textarea>
+                                <div class="step-stage__items">
+                                    <div class="step-stage__item">
+                                        <div class="minus" data-fancybox data-src="#ok-remove" data-tooltip="Удалить">-</div>
+                                        <div class="step-stage__top active" data-toggle="#stage1">
+                                            <div class="step-stage__top-title">
+                                                Этап 1
+                                            </div>
+                                            <div class="step-stage__top-date">
+                                                12.08.2021 13:00
+                                            </div>
+                                            <div class="step-stage__top-arrow">
+                                                <svg>
+                                                    <use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="step-stage__bl" style="display: block" id="stage1">
+                                            <div class="step-stage__row">
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Зуб:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            <select multiple="multiple" data-placeholder="Выберите" name="zoob" class="select j-select step-stage__select">
+                                                                <option value="32" selected>32</option>
+                                                                <option value="13" selected>13</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Диагностика:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            Кариес
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Лечение:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            Пломба
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Посещений:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            <div class="input">
+                                                                <input type="number" placeholder="1" value="1" min="1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Дата визита:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            <label class="input input--date">
+                                                                <input type="text" placeholder="__.__.__" class="j-date" readonly>
+                                                                <svg>
+                                                                    <use xlink:href="<?= $target; ?>/img/icons.svg#date"/>
+                                                                </svg>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Время:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            <select class="select j-select step-stage__select">
+                                                                <option value="13:00">13:00</option>
+                                                                <option value="14:00">14:00</option>
+                                                                <option value="15:00">15:00</option>
+                                                                <option value="16:00">16:00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="step-stage__textarea">
+                                                <textarea rows="3" class="step__textarea" placeholder="Описание"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="step-stage__item">
+                                        <div class="minus" data-fancybox data-src="#ok-remove" data-tooltip="Удалить">-</div>
+                                        <div class="step-stage__top" data-toggle="#stage2">
+                                            <div class="step-stage__top-title">
+                                                Этап 2
+                                            </div>
+                                            <div class="step-stage__top-date">
+                                                12.08.2021 13:00
+                                            </div>
+                                            <div class="step-stage__top-arrow">
+                                                <svg>
+                                                    <use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
+                                                </svg>
+                                            </div>
+                                        </div>
+                                        <div class="step-stage__bl" id="stage2">
+                                            <div class="step-stage__row">
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Зуб:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            <select multiple="multiple" data-placeholder="Выберите" name="zoob" class="select j-select step-stage__select">
+                                                                <option value="32" selected>32</option>
+                                                                <option value="13" selected>13</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Диагностика:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            Пульпит
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Лечение:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            Пломба
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Посещений:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            <div class="input">
+                                                                <input type="number" placeholder="2" min="1">
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Дата визита:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            <label class="input input--date">
+                                                                <input type="text" placeholder="__.__.__" class="j-date" readonly>
+                                                                <svg>
+                                                                    <use xlink:href="<?= $target; ?>/img/icons.svg#date"/>
+                                                                </svg>
+                                                            </label>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="step-stage__col">
+                                                    <div class="step-stage__label">
+                                                        <div class="step-stage__label-title">
+                                                            Время:
+                                                        </div>
+                                                        <div class="step-stage__label-val">
+                                                            <select class="select j-select step-stage__select">
+                                                                <option value="13:00">13:00</option>
+                                                                <option value="14:00">14:00</option>
+                                                                <option value="15:00">15:00</option>
+                                                                <option value="16:00">16:00</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="step-stage__textarea">
+                                                <textarea rows="3" class="step__textarea" placeholder="Описание"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                             <div class="step__nav">
                                 <div class="step__nav-col">
-                                    <div class="btn btn--border">Сбросить фильтр</div>
+                                    <div class="btn btn--border">Создать визит</div>
                                 </div>
                             </div>
                             <label class="step__load">

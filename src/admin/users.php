@@ -219,32 +219,47 @@ include '../templates/header.php'; ?>
                         <div class="users-table__col users-table__col--subscription">
                             <div class="users-table__td users-table__td--head">
                                 <div class="users-table__title">
-                                    Подписка до
+                                    Подписка
                                 </div>
                             </div>
                             <div class="users-table__td">
                                 <div class="users-table__btn">
                                     Базовый тариф
                                 </div>
+                                <div class="users-table__btn users-table__btn--red" data-fancybox data-src="#extend">
+                                    Продлить
+                                </div>
                             </div>
                             <div class="users-table__td">
                                 <div class="users-table__btn">
                                     Пробный период
+                                </div>
+                                <div class="users-table__btn users-table__btn--red" data-fancybox data-src="#extend">
+                                    Продлить
                                 </div>
                             </div>
                             <div class="users-table__td">
                                 <div class="users-table__btn">
                                     Годовая подписка
                                 </div>
+                                <div class="users-table__btn users-table__btn--red" data-fancybox data-src="#extend">
+                                    Продлить
+                                </div>
                             </div>
                             <div class="users-table__td">
                                 <div class="users-table__btn">
                                     Премиум +
                                 </div>
+                                <div class="users-table__btn users-table__btn--red" data-fancybox data-src="#extend">
+                                    Продлить
+                                </div>
                             </div>
                             <div class="users-table__td">
                                 <div class="users-table__btn">
                                     Не продлили
+                                </div>
+                                <div class="users-table__btn users-table__btn--red" data-fancybox data-src="#extend">
+                                    Продлить
                                 </div>
                             </div>
                         </div>
@@ -369,10 +384,15 @@ include '../templates/header.php'; ?>
                                     <div class="users-table__td">
                                         <div class="users-table__subscription-flex">
                                             <div class="users-table__title">
-                                                Подписка до
+                                                Подписка
                                             </div>
-                                            <div class="users-table__btn">
-                                                Базовый тариф
+                                            <div class="users-table__btns">
+                                                <div class="users-table__btn">
+                                                    Базовый тариф
+                                                </div>
+                                                <div class="users-table__btn users-table__btn--red" data-fancybox data-src="#extend">
+                                                    Продлить
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -429,6 +449,23 @@ include '../templates/header.php'; ?>
                     </button>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="modal modal--extend" id="extend">
+        <div class="modal__inner">
+            <div class="modal__title">
+                Продлить
+            </div>
+            <form>
+                <select class="j-select select">
+                    <option value="1 месяц">1 месяц</option>
+                    <option value="2 месяц">2 месяца</option>
+                    <option value="3 месяц">3 месяца</option>
+                    <option value="4 месяц">4 месяца</option>
+                </select>
+                <button type="submit" class="btn modal__btn btn--orange">Применить</button>
+            </form>
         </div>
     </div>
     

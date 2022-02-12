@@ -144,7 +144,7 @@
     &__td {
         padding: 0 15px;
         border-bottom: 1px solid rgba(#000, .1);
-        height: 56px;
+        height: 76px;
         display: flex;
         flex-direction: column;
         justify-content: center;
@@ -204,6 +204,9 @@
             }
         }
     }
+    &__btns {
+        max-width: min-content;
+    }
     &__btn {
         height: 28px;
         min-width: 124px;
@@ -212,12 +215,25 @@
         align-items: center;
         text-align: center;
         font: 700 12px / 1 $font;
-        background: $orange;
-        color: #fff;
+        border: 1px solid $orange;
+        color: $orange;
         border-radius: 25px;
         overflow: hidden;
         text-overflow: ellipsis;
         white-space: nowrap;
+        transition: .3s all ease;
+        &--red {
+            background: $orange;
+            color: #fff;
+            cursor: pointer;
+            &:hover {
+                background: $orangeD;
+                border-color: $orangeD;
+            }
+        }
+        &:last-child {
+            margin: 5px 0 0;
+        }
     }
     .minus {
         position: absolute;
@@ -343,7 +359,7 @@
         &__subscription-flex {
             display: flex;
             justify-content: space-between;
-            align-items: center;
+            align-items: baseline;
             width: 100%;
             .users-table {
                 &__input {

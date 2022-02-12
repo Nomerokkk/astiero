@@ -135,34 +135,33 @@ $('.j-table-users-arrow').on('click', function() {
 
 
 /***************SHOW MESSAGE***********/
+function show_message(el) {
+    $('.j-panel-message-wrap').show();
+
+    gsap.fromTo(el, {
+        x: 50
+    }, {
+        x: 0, 
+        visibility: 'visible', 
+        opacity: 1, 
+        duration: .3
+    });
+}
+
+function hide_message(el) {
+    gsap.to(el, {
+        x: 50, 
+        opacity: 0,
+        duration: .3
+    });
+
+    setTimeout(() => {
+        $(el).remove();
+    }, 300);
+}
+
 $(function() {
-	var $msg = $('.j-panel-message'),
-		$msg_wrapper = $('.j-panel-message-wrap');
-
-    function show_message(el) {
-        $msg_wrapper.show();
-
-        gsap.fromTo(el, {
-            x: 50
-        }, {
-            x: 0, 
-            visibility: 'visible', 
-            opacity: 1, 
-            duration: .3
-        });
-    }
-
-    function hide_message(el) {
-		gsap.to(el, {
-            x: 50, 
-            opacity: 0,
-            duration: .3
-        });
-
-		setTimeout(() => {
-            $(el).remove();
-		}, 300);
-	}
+    let $msg = $('.j-panel-message');
 
     if($msg.length > 0) {
         show_message($msg[0]);
