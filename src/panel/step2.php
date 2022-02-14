@@ -78,21 +78,26 @@ include '../templates/header.php'; ?>
                                         'border' => 'normal',
                                     ],
                                     2 => [
+                                        'title' => 'Гингивит',
+                                        'dir' => 'gingivit',
+                                        'border' => 'normal',
+                                    ],
+                                    3 => [
                                         'title' => 'Кровоточивость',
                                         'dir' => 'krovotochivost',
                                         'border' => 'normal',
                                     ],
-                                    3 => [
+                                    4 => [
                                         'title' => 'Гной',
                                         'dir' => 'gnoj',
                                         'border' => 'normal',
                                     ],
-                                    4 => [
+                                    5 => [
                                         'title' => 'Пародонтальные карманы',
                                         'dir' => 'parodontalnye_karmany',
                                         'border' => 'normal',
                                     ],
-                                    5 => [
+                                    6 => [
                                         'title' => 'Подвижность зубов',
                                         'dir' => 'podvizhnost_zubov',
                                         'border' => 'normal',
@@ -187,16 +192,11 @@ include '../templates/header.php'; ?>
                                         'border' => 'normal',
                                     ],
                                     1 => [
-                                        'title' => 'Имплантат (десневая рецессия)',
-                                        'dir' => 'desnevaya_recessiya',
-                                        'border' => 'normal',
-                                    ],
-                                    2 => [
                                         'title' => 'Имплантат (потеря кости)',
                                         'dir' => 'poterya_kosti',
                                         'border' => 'normal',
                                     ],
-                                    3 => [
+                                    2 => [
                                         'title' => 'Ретинированный',
                                         'dir' => 'retinirovannyj',
                                         'border' => 'normal',

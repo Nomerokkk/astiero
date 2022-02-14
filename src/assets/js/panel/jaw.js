@@ -1,7 +1,8 @@
 const $tooth_item = $('.j-jaw-item'),
     $title_jaw = $('.j-title-jaw'),
     $radio = $('.j-tooth-radio'),
-    $loader = $('.j-jaw-loader');
+    $loader = $('.j-jaw-loader'),
+    $zoom_btn = $('.j-zoom-btn');
 
 let pan;
 
@@ -25,13 +26,29 @@ if($('.j-panzoom').length > 0) {
     });
 
     $window.on('resize', function() {
-        pan.updateMetrics(true);
+        pan.zoomTo(1)
+
+        if($window.width() < 486) {
+            gsap.to('.j-jaw', {
+                scale: .7,
+                duration: .3,
+            });
+        } else {
+            gsap.to('.j-jaw', {
+                scale: 1,
+                duration: .3,
+            });
+        }
+
+        $zoom_btn.removeClass('active');
     });
 }
 
 /*********************ZOOM BTN******************/
-$('.j-zoom-btn').on('click', function() {
+$zoom_btn.on('click', function() {
     let $this = $(this);
+
+    pan.toggleZoom();
 
     if(!$this.is('.active')) {            
         gsap.to('.j-jaw', {
@@ -42,15 +59,20 @@ $('.j-zoom-btn').on('click', function() {
         $this.addClass('active');
 
     } else {
-        gsap.to('.j-jaw', {
-            scale: 1,
-            duration: .3,
-        });
+        if($window.width() < 486) {
+            gsap.to('.j-jaw', {
+                scale: .7,
+                duration: .3,
+            });
+        } else {
+            gsap.to('.j-jaw', {
+                scale: 1,
+                duration: .3,
+            });
+        }
 
         $this.removeClass('active');
     }
-
-    pan.toggleZoom();
 });
 
 /*******************CLICK TOOTH******************/
@@ -77,8 +99,6 @@ $radio.on('click', function() {
         class_border = $this.data('class-border'),
         format = $this.data('format'),
         number = $this.data('number'),
-        $visual = $tooth_item_active.find('.visual'),
-        visual = $this.data('visual'),
         sinus = $this.data('sinus');
 
     if(sinus == undefined) {
@@ -95,6 +115,15 @@ $radio.on('click', function() {
                 .addClass(class_border);
         }
 
+        //Change border
+        if(dir_border != '') {
+            let src = dir_border + number + '.svg',
+                $border_img = $tooth_item_active.find('.border img');
+
+            $tooth_item_active.removeClass(class_border).addClass(class_border);
+
+            $border_img.attr('src', src);
+        }
 
         //Change img tooth
         if(dir != '') {
@@ -120,26 +149,34 @@ $radio.on('click', function() {
         }
 
         //Add visual element
-        $visual.html('');
-
         if($this.is('[data-visual]')) {
-            let src = visual + number + '.' + format,
+            let $visual = $tooth_item_active.find('.visual'),
+                visual = $this.data('visual'),
+                src = visual + number + '.' + format,
                 $img = $('<img/>');
+
+            $visual.html('');
 
             $tooth_item_active.addClass(visual);
             $img.attr('src', src).appendTo($visual);  
         }
 
-        //Change border
-        if(dir_border != '') {
-            let src = dir_border + number + '.svg',
-                $border_img = $tooth_item_active.find('.border img');
-
-            $tooth_item_active.removeClass(class_border).addClass(class_border);
-
-            $border_img.attr('src', src);
+        //Change if size full
+        if($this.is('[data-size]')) {
+            if(number >= 17) {
+                $tooth_item
+                    .attr('class', 'j-jaw-item active jaw-item jaw-item--bottom jaw-item--' + number)
+                    .addClass(class_)
+                    .addClass(class_border);
+            } else {
+                $tooth_item
+                    .attr('class', 'j-jaw-item active jaw-item jaw-item--' + number)
+                    .addClass(class_)
+                    .addClass(class_border);
+            }
         }
 
+    // if is sinus
     } else {
         let $sinus_left = $('.j-sinus-left'),
             $sinus_right = $('.j-sinus-right'),

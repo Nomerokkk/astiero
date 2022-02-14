@@ -31,7 +31,7 @@ include 'templates/header.php'; ?>
                             <img src="<?= $target; ?>/img/home/notebook.png" alt="">
                         </div>
                     </div>
-                    <form class="banner__form banner__form--register j-form j-wow j-wow-up">
+                    <form class="banner__form banner__form--register j-form j-wow j-wow-up" data-modal="#code">
                         <div class="banner__form-inner">
                             <div class="banner__form-title">
                                 Создать учетную запись
@@ -71,6 +71,39 @@ include 'templates/header.php'; ?>
                 </div>
             </div>
         </section>
+    </div>
+
+    <div class="modal modal--code modal--code2" id="code">
+        <div class="modal__inner">
+            <div class="modal__title">
+                Введите код подтверждения
+            </div>
+            <div class="modal__inputs">
+                <div class="modal__inputs-col j-code-col">
+                    <input type="text" class="j-code">
+                </div>
+                <div class="modal__inputs-col j-code-col">
+                    <input type="text" class="j-code">
+                </div>
+                <div class="modal__inputs-col j-code-col">
+                    <input type="text" class="j-code">
+                </div>
+                <div class="modal__inputs-col j-code-col">
+                    <input type="text" class="j-code">
+                </div>
+            </div>
+            <a href="new-password.php" class="btn btn--orange modal__btn">
+                Далее
+            </a>
+        </div>
+        <div class="modal__bottom">
+            <div class="modal__number j-timer">
+                0:59
+            </div>
+            <div class="modal__link">
+                Отправить еще раз
+            </div>
+        </div>
     </div>
 
 <? include 'templates/footer.php'; ?>

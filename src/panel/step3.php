@@ -94,48 +94,47 @@ include '../templates/header.php'; ?>
                                 'title' => 'Хирургия и имплантация',
                                 'sub' => [
                                     0 => [
+                                        'title' => 'Удаление зуба / имплантата',
+                                        'border' => 'normal',
+                                    ],
+                                    1 => [
                                         'title' => 'Установка имплантата',
                                         'dir' => 'ustanovka_implantata',
                                         'border' => 'implant',
                                     ],
-                                    1 => [
+                                    2 => [
                                         'title' => 'Костная пластика',
                                         'dir' => 'kostnaya_plastika',
                                         'format' => 'png',
                                         'border' => 'normal',
                                     ],
-                                    2 => [
+                                    3 => [
                                         'title' => 'Пластика десны',
                                         'dir' => 'lechenie_kanalov_neudovlit',
                                         'border' => 'normal',
                                     ],
-                                    3 => [
+                                    4 => [
                                         'title' => 'Синус-лифтинг (открытый / закрытый (крестальный))',
                                         'dir' => 'sinus',
                                         'border' => 'normal',
                                         'sinus' => 'two',
                                     ],
-                                    4 => [
-                                        'title' => 'Синус-лифтинг (открытый / закрытый (правый))',
-                                        'dir' => 'sinus',
-                                        'border' => 'normal',
-                                        'sinus' => 'right',
-                                    ],
                                     5 => [
                                         'title' => 'Синус-лифтинг (открытый / закрытый (левый))',
                                         'dir' => 'sinus',
                                         'border' => 'normal',
-                                        'sinus' => 'left',
+                                        'sinus' => 'right',
                                     ],
                                     6 => [
+                                        'title' => 'Синус-лифтинг (открытый / закрытый (правый))',
+                                        'dir' => 'sinus',
+                                        'border' => 'normal',
+                                        'sinus' => 'left',
+                                    ],
+                                    7 => [
                                         'title' => 'Хирургический шаблон',
                                         'dir' => 'hirurgicheskij_shablon',
                                         'border' => 'small',
-                                    ],
-                                    7 => [
-                                        'title' => 'Абатмент',
-                                        'dir' => 'abatment',
-                                        'border' => 'implant',
                                     ],
                                 ],
                             ],
@@ -173,6 +172,11 @@ include '../templates/header.php'; ?>
                                         'border' => 'small',
                                         'visual' => true,
                                     ],
+                                    6 => [
+                                        'title' => 'Абатмент',
+                                        'dir' => 'abatment',
+                                        'border' => 'implant',
+                                    ],
                                 ],
                             ],
                             4 => [
@@ -180,8 +184,9 @@ include '../templates/header.php'; ?>
                                 'sub' => [
                                     0 => [
                                         'title' => 'Брекеты',
-                                        'dir' => 'viniry',
+                                        'dir' => 'normal',
                                         'border' => 'normal',
+                                        'visual' => 'brekety',
                                     ],
                                     2 => [
                                         'title' => 'Минимпланты',
@@ -192,6 +197,7 @@ include '../templates/header.php'; ?>
                                         'title' => 'Елайнеры',
                                         'dir' => 'elajner',
                                         'border' => 'normal',
+                                        'size' => 'full',
                                     ],
                                     4 => [
                                         'title' => 'Ретейнер',
@@ -237,6 +243,7 @@ include '../templates/header.php'; ?>
                                     $format = ($item['format']) ? $item['format'] : 'svg';
                                     $visual = ($item['visual']) ? $target . '/img/jaw/visual/' . $visual . '/' : '';
                                     $sinus = $item['sinus'];
+                                    $size = $item['size'];
                                 ?>
                                     <li>
                                         <label class="tabs__label">
@@ -251,6 +258,9 @@ include '../templates/header.php'; ?>
                                                 <? } ?>
                                                 <? if($sinus) { ?>
                                                     data-sinus="<?= $sinus; ?>"
+                                                <? } ?>
+                                                <? if($size) { ?>
+                                                    data-size="<?= $size; ?>"
                                                 <? } ?>
                                                 data-number="">
                                             <span class="tabs__label-title">

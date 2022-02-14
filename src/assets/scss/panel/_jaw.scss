@@ -9,8 +9,10 @@
     transform: translate(-50%, -50%);
     &__bg {
         width: 100%;
+        height: 246.38px;
         img {
             width: 100%;
+            height: 100%;
         }
     }
     &__gum-top {
@@ -18,12 +20,14 @@
         left: 0;
         top: 0;
         transform: translate(56.5px, 89px);
+        display: none;
     }
     &__gum-bottom {
         position: absolute;
         top: 0;
         left: 0;
         transform: translate(53px, 156px);
+        display: none;
     }
     &__sinus-left {
         display: none;
@@ -50,13 +54,18 @@
     }
 }
 
+@media all and (max-width: 486px) {
+    .jaw {
+        transform: translate(-50%, -50%) scale(.7);
+    }
+}
+
 
 .jaw-item {
     left: 0;
     top: 0;
     position: absolute;
     cursor: pointer;
-    transition: .1s transform ease;
     &.active,
     &:hover {
         .tooth:before {
@@ -66,6 +75,10 @@
     .border {
         width: 100%;
         height: 100%;
+        img {
+            width: 100%;
+            height: 100%;
+        }
     }
     .tooth {
         position: absolute;
@@ -85,10 +98,9 @@
             opacity: 0;
             z-index: 1;
         }
-    }
-
-    img {
-        max-width: unset;
+        img {
+            max-width: unset;
+        }
     }
 
     .visual {
@@ -96,6 +108,9 @@
         pointer-events: none;
         left: 0;
         top: 0;
+        img {
+            max-width: unset;
+        }
     }
 
     &.kostnaya_plastika {
@@ -137,9 +152,12 @@
 
     //TOP JAW
     &--1 {
-        transform: translate(67px, 87px);
+        transform: translate(65.77235412597656px, 86.41476440429688px);
+        height: 31.076637268066406px;
+        width: 25.69454574584961px;
         .tooth {
-            transform: translate(1px, 2px);
+            // transform: translate(1px, 2px);
+            transform: translate(.4px, 1.2px);
         }
         &.implant {
             transform: translate(69px, 80px);
@@ -183,33 +201,33 @@
         &.vremennaya_koronka,
         &.elajner {
             .tooth {
-                transform: translate(1.7px, 1.6px);
+                transform: translate(1.1px, .8px);
             }
         }
 
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(0, 2px);
+                transform: translate(-.6, 1.2px);
             }
         }
 
         &.krovotochivost,
         &.gnoj {
             .tooth {
-                transform: translate(1.5px, 1.8px);
+                transform: translate(.9px, 1px);
             }
         }
 
         &.parodontalnye_karmany,
         &.nakladka {
             .tooth {
-                transform: translate(1.7px, 1.6px);
+                transform: translate(1.1px, .8px);
             }
         }
 
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(1.5px, 1.8px);
+                transform: translate(.9px, 1px);
             }
         }
 
@@ -222,12 +240,12 @@
         &.treshina_do_desny,
         &.treshina_nizhe_desny {
             .tooth {
-                transform: translate(1.7px, 1.7px);
+                transform: translate(1.1px, .9px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(1.5px, 2px);
+                transform: translate(.9px, 1.2px);
             }
         }
 
@@ -236,29 +254,39 @@
         &.perelom_kornya,
         &.viniry {
             .tooth {
-                transform: translate(1.8px, 1.8px);
+                transform: translate(1.2px, 1px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(1.6px, 1.5px);
+                transform: translate(1px, .7px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(1.5px, 1.3px);
+                transform: translate(.9px, .5px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(1.66px, 1.7px);
+                transform: translate(1.06px, .9px);
+            }
+        }
+
+
+        &.brekety {
+            .visual {
+                transform: translate(10px, 29px);
             }
         }
     }
     &--2 {
-        transform: translate(92px, 92px);
+        transform: translate(91.4769058227539px, 90.82826232910156px);
+        height: 30.543132781982422px;
+        width: 23.01000213623047px;
         .tooth {
-            transform: translate(.8px, 1px);
+            // transform: translate(.8px, 1px);
+            transform: translate(.4px, .8px);
         }
         &.implant {
             transform: translate(91px, 83px);
@@ -305,46 +333,55 @@
         &.pulpit,
         &.lechenie_kanalov_udovlit {
             .tooth {
-                transform: translate(-.2px, 1px);
+                transform: translate(-.6px, .8px);
             }
         }
         &.krovotochivost,
         &.gnoj {
             .tooth {
-                transform: translate(-.3px, 1.2px);
+                transform: translate(-.7px, 1px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(.8px, .7px);
+                transform: translate(.4px, .5px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(.8px, -.5px);
+                transform: translate(.4px, -.7px);
             }
         }
         &.wax_up {
             .tooth {
-                transform: translate(0.1px, .3px);
+                transform: translate(-.3px, .1px);
             }
         }
         &.kornevaya_vkladka,
         &.build_up {
             .tooth {
-                transform: translate(1.1px, .4px);
+                transform: translate(.7px, .2px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-1.2px, 1px);
+                transform: translate(-1.6px, .8px);
+            }
+        }
+
+        &.brekety {
+            .visual {
+                transform: translate(0, 27.5px);
             }
         }
     }
     &--3 {
-        transform: translate(114px, 88px);
+        transform: translate(114.0319595336914px, 87.12602233886719px);
+        height: 35.72538757324219px;
+        width: 26.444957733154297px;
         .tooth {
-            transform: translate(1.7px, 1px);
+            // transform: translate(1.7px, 1px);
+            transform: translate(1px, .6px);
         }
         &.implant {
             transform: translate(116px, 84px);
@@ -386,51 +423,54 @@
         &.krovotochivost,
         &.gnoj {
             .tooth {
-                transform: translate(.6px, 1.2px);
+                transform: translate(-.1px, .8px);
             }
         }
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(1.5px, 1px);
+                transform: translate(.8px, .6px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(1.4px, 1.4px);
+                transform: translate(.7px, 1px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(1.6px, 1.7px);
+                transform: translate(.9px, 1.3px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(1.5px, .6px);
+                transform: translate(.8px, .2px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(.8px, 1.1px);
+                transform: translate(.1px, .7px);
             }
         }
         &.wax_up,
         &.kornevaya_vkladka,
         &.build_up {
             .tooth {
-                transform: translate(1px, 1.4px);
+                transform: translate(.3px, 1px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-.3px, 1px);
+                transform: translate(-1px, .6px);
             }
         }
     }
     &--4 {
-        transform: translate(141px, 85px);
+        transform: translate(140.4769058227539px, 84.28543090820312px);
+        height: 39.09596633911133px;
+        width: 18.029998779296875px;
         .tooth {
-            transform: translate(-.15px, 1px);
+            // transform: translate(-.15px, 1px);
+            transform: translate(-.35px, 1px);
         }
         &.implant {
             transform: translate(140px, 85px);
@@ -464,40 +504,43 @@
 
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(-.5px, 1px);
+                transform: translate(-.7px, 1px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(-.2px, 1.6px);
+                transform: translate(-.4px, 1.6px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-.2px, .5px);
+                transform: translate(-.4px, .5px);
             }
         }
         &.wax_up {
             .tooth {
-                transform: translate(-.9px, 1.4px);
+                transform: translate(-1.1px, 1.4px);
             }
         }
         &.kornevaya_vkladka,
         &.build_up {
             .tooth {
-                transform: translate(3.1px, 1.4px);
+                transform: translate(2.9px, 1.4px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-1.2px, 1px);
+                transform: translate(-1.4px, 1px);
             }
         }
     }
     &--5 {
-        transform: translate(159px, 85px);
+        transform: translate(158.4969253540039px, 84.11192321777344px);
+        height: 39.939476013183594px;
+        width: 18.009994506835938px;
         .tooth {
-            transform: translate(0, 1px);
+            // transform: translate(0, 1px);
+            transform: translate(-.3px, 1px);
         }
         &.implant {
             transform: translate(159px, 86px);
@@ -532,36 +575,39 @@
         &.karies_oklyuzionnyj,
         &.wax_up {
             .tooth {
-                transform: translate(.4px, 1.3px);
+                transform: translate(.1px, 1.3px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(0, 1.8px);
+                transform: translate(-.3px, 1.8px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(0, -1.2px);
+                transform: translate(-.3px, -1.2px);
             }
         }
         &.kornevaya_vkladka,
         &.build_up {
             .tooth {
-                transform: translate(3.2px, 1.3px);
+                transform: translate(2.9px, 1.3px);
             }
         }
         
         &.elajner {
             .tooth {
-                transform: translate(-1.9px, 1px);
+                transform: translate(-2.2px, 1px);
             }
         }
     }
     &--6 {
-        transform: translate(177px, 76px);
+        transform: translate(176.4769058227539px, 74.98635864257812px);
+        height: 50.235050201416016px;
+        width: 20px;
         .tooth {
-            transform: translate(1px, 1px);
+            // transform: translate(1px, 1px);
+            transform: translate(.8px, 1px);
         }
         &.implant {
             transform: translate(178px, 87px);
@@ -596,55 +642,58 @@
         &.krovotochivost,
         &.gnoj {
             .tooth {
-                transform: translate(-.1px, 1px);
+                transform: translate(-.3px, 1px);
             }
         }
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(.8px, 1px);
+                transform: translate(.6px, 1px);
             }
         }
         &.parodontalnye_karmany {
             .tooth {
-                transform: translate(0, 1px);
+                transform: translate(-.2px, 1px);
             }
         }
         &.lechenie_kanalov_neudovlit  {
             .tooth {
-                transform: translate(.9px, .7px);
+                transform: translate(.7px, .7px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(.8px, -1.5px);
+                transform: translate(.6px, -1.5px);
             }
         }
         &.wax_up {
             .tooth {
-                transform: translate(.3px, 1.3px);
+                transform: translate(.1px, 1.3px);
             }
         }
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(.1px, 1.3px);
+                transform: translate(-.1px, 1.3px);
             }
         }
         &.kornevaya_vkladka,
         &.build_up {
             .tooth {
-                transform: translate(3.2px, 1.4px);
+                transform: translate(3px, 1.4px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-1px, 1px);
+                transform: translate(-1.2px, 1px);
             }
         }
     }
     &--7 {
-        transform: translate(197px, 86px);
+        transform: translate(196.4769058227539px, 84.58555603027344px);
+        height: 40.64583969116211px;
+        width: 19.029998779296875px;
         .tooth {
-            transform: translate(.1px, 0);
+            // transform: translate(.1px, 0);
+            transform: translate(0, 0);
         }
         &.implant {
             transform: translate(197px, 90px);
@@ -700,7 +749,7 @@
         &.kyuretazh,
         &.elajner {
             .tooth {
-                transform: translate(-.2px, .6px);
+                transform: translate(-.3px, .6px);
             }
         }
         &.krovotochivost,
@@ -708,44 +757,46 @@
         &.podvizhnost_zubov,
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(.6px, .8px);
+                transform: translate(.5px, .8px);
             }
         }
         &.treshina_nizhe_desny,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(.8px, .8px);
+                transform: translate(.7px, .8px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(.4px, .9px);
+                transform: translate(.3px, .9px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(.7px, -1.8px);
+                transform: translate(.6px, -1.8px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-.1px, -.1px);
+                transform: translate(-.2px, -.1px);
             }
         }
         &.nakladka {
             .tooth {
-                transform: translate(.8px, .8px);
+                transform: translate(.7px, .8px);
             }
         }
         &.kornevaya_vkladka,
         &.build_up {
             .tooth {
-                transform: translate(3.1px, .2px);
+                transform: translate(3px, .2px);
             }
         }
     }
     &--8 {
-        transform: translate(216px, 77px);
+        transform: translate(215.48688507080078px, 75.56416320800781px);
+        height: 49.12724685668945px;
+        width: 25px;
         .tooth {
             transform: translate(-.9px, 1px);
         }
@@ -841,7 +892,7 @@
                 transform: translate(-.4px, -1.7px);
             }
         }
-        &.desnevaya_recessiya  {
+        &.gingivit  {
             .tooth {
                 transform: translate(-.2px, -.1px);
             }
@@ -864,11 +915,12 @@
         }
     }
     &--9 {
-        left: unset;
-        right: 0;
-        transform: translate(-218px, 76px);
+        transform: translate(240.48688507080078px, 75.32144165039062px);
+        height: 49.43366622924805px;
+        width: 25.000015258789062px;
         .tooth {
-            transform: translate(.2px, 1.9px);
+            // transform: translate(.2px, 1.9px);
+            transform: translate(.2px, 1.4px);
         }
         &.implant {
             transform: translate(-220px, 89px);
@@ -921,70 +973,71 @@
         &.viniry,
         &.nakladka {
             .tooth {
-                transform: translate(-.2px, 1.7px);
+                transform: translate(-.2px, 1.2px);
             }
         }
         &.kyuretazh {
             .tooth {
-                transform: translate(.1px, 1.7px);
+                transform: translate(.1px, 1.2px);
             }
         }
         &.krovotochivost,
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(.6px, 1.9px);
+                transform: translate(.6px, 1.4px);
             }
         }
         &.karies_yazychnyj,
         &.koronka_razrushena {
             .tooth {
-                transform: translate(.9px, 1.7px);
+                transform: translate(.9px, 1.2px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(.6px, 1.3px);
+                transform: translate(.6px, .8px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(.7px, -1px);
+                transform: translate(.7px, -1.5px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(.9px, .7px);
+                transform: translate(.9px, .2px);
             }
         }
         &.wax_up {
             .tooth {
-                transform: translate(.4px, 2.1px);
+                transform: translate(.4px, 1.6px);
             }
         }
         &.kornevaya_vkladka,
         &.build_up {
             .tooth {
-                transform: translate(3.2px, 1.9px);
+                transform: translate(3.2px, 1.4px);
             }
         }
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(.1px, 1.7px);
+                transform: translate(.1px, 1.2px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-1.2px, 1.6px);
+                transform: translate(-1.2px, 1.1px);
             }
         }
     }
     &--10 {
-        left: unset;
-        right: 0;
-        transform: translate(-199px, 85px);
+        transform: translate(265.5069046020508px, 84.20967102050781px);
+        height: 40.461727142333984px;
+        width: 18.989990234375px;
         .tooth {
-            transform: translate(.1px, 1px);
+            // transform: translate(.1px, 1px);
+            transform: translate(1.1px, .5px);
         }
         &.implant {
             transform: translate(-199px, 89px);
@@ -1024,7 +1077,7 @@
         // step1
         &.poterya_kosti {
             .tooth {
-                transform: translate(-.4px, 4.7px);
+                transform: translate(.6px, 4.7px);
             }
         }
 
@@ -1045,59 +1098,60 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(-.1px, 1.6px);
+                transform: translate(.9px, 1.1px);
             }
         }
         &.krovotochivost,
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(.6px, 1.8px);
+                transform: translate(1.6px, 1.3px);
             }
         }
         &.koronka_razrushena {
             .tooth {
-                transform: translate(1.8px, 1.6px);
+                transform: translate(2.8px, 1.1px);
             }
         }
         &.treshina_nizhe_desny {
             .tooth {
-                transform: translate(-.1px, 1.6px);
+                transform: translate(.9px, 1.1px);
             }
         }
         &.karies_oklyuzionnyj,
         &.wax_up {
             .tooth {
-                transform: translate(.1px, 2px);
+                transform: translate(1px, 1.5px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(.6px, 1.4px);
+                transform: translate(1.6px, .9px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(.7px, -1px);
+                transform: translate(1.7px, -1.5px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-.1px, .7px);
+                transform: translate(.9px, .2px);
             }
         }    
         &.elajner {
             .tooth {
-                transform: translate(-1.2px, 1.5px);
+                transform: translate(-.2px, 1px);
             }
         }
     }
     &--11 {
-        left: unset;
-        right: 0;
-        transform: translate(-179px, 76px);
+        transform: translate(284.4869155883789px, 74.52082824707031px);
+        height: 50.313228607177734px;
+        width: 21.029998779296875px;
         .tooth {
-            transform: translate(-.8px, 1px);
+            // transform: translate(-.8px, 1px);
+            transform: translate(.2px, 1px);
         }
         &.implant {
             transform: translate(-179px, 87px);
@@ -1158,62 +1212,62 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(0, .5px);
+                transform: translate(1px, .5px);
             }
         }
         &.krovotochivost,
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-.2px, .7px);
+                transform: translate(.8px, .7px);
             }
         }
         &.koronka_razrushena {
             .tooth {
-                transform: translate(0, .5px);
+                transform: translate(1px, .5px);
             }
         }
         &.treshina_nizhe_desny {
             .tooth {
-                transform: translate(-.1px, .6px);
+                transform: translate(.9px, .6px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(-.2px, .5px);
+                transform: translate(.8px, .5px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(-.2px, 1.2px);
+                transform: translate(.8px, 1.2px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-.3px, -1.7px);
+                transform: translate(.7px, -1.7px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-.1px, .7px);
+                transform: translate(.9px, .7px);
             }
         }
         &.kornevaya_vkladka,
         &.build_up {
             .tooth {
-                transform: translate(3.1px, 1px);
+                transform: translate(4.1px, 1px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-2.1px, .4px);
+                transform: translate(-1.1px, .4px);
             }
         }
     }
     &--12 {
-        left: unset;
-        right: 0;
-        transform: translate(-160px, 85px);
+        transform: translate(305.4668960571289px, 84.30863952636719px);
+        height: 39.682762145996094px;
+        width: 18.010009765625px;
         .tooth {
             transform: translate(.2px, 1.3px);
         }
@@ -1311,7 +1365,7 @@
                 transform: translate(-.3px, -.6px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
                 transform: translate(-.1px, .9px);
             }
@@ -1323,11 +1377,12 @@
         }
     }
     &--13 {
-        left: unset;
-        right: 0;
-        transform: translate(-142px, 85px);
+        transform: translate(323.4869155883789px, 84.20175170898438px);
+        height: 39.03904342651367px;
+        width: 19.009979248046875px;
         .tooth {
-            transform: translate(0, 1px);
+            // transform: translate(0, 1px);
+            transform: translate(1.2px, 1px);
         }
         &.implant {
             transform: translate(-142px, 85px);
@@ -1381,58 +1436,59 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(-.2px, .6px);
+                transform: translate(1px, .6px);
             }
         }
         &.krovotochivost,
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-.4px, .8px);
+                transform: translate(.8px, .8px);
             }
         }
         &.koronka_razrushena {
             .tooth {
-                transform: translate(-.2px, .7px);
+                transform: translate(1px, .7px);
             }
         }
         &.treshina_nizhe_desny {
             .tooth {
-                transform: translate(-.2px, .7px);
+                transform: translate(1px, .7px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(.1px, .8px);
+                transform: translate(1.3px, .8px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(-.4px, .4px);
+                transform: translate(.8px, .4px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-.5px, -.8px);
+                transform: translate(.7px, -.8px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-.2px, .7px);
+                transform: translate(1px, .7px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-2.2px, .6px);
+                transform: translate(-1px, .6px);
             }
         }
     }
     &--14 {
-        left: unset;
-        right: 0;
-        transform: translate(-116px, 88px);
+        transform: translate(342.4869155883789px, 87.31602478027344px);
+        height: 34.805389404296875px;
+        width: 27.18772315979004px;
         .tooth {
-            transform: translate(.1px, 1px);
+            // transform: translate(.1px, 1px);
+            transform: translate(.1px, .5px);
         }
         &.implant {
             transform: translate(-117px, 84px);
@@ -1479,14 +1535,14 @@
         &.nalet,
         &.zubnoj_kamen {
             .tooth {
-                transform: translate(-1.2px, .7px);
+                transform: translate(-1.2px, .2px);
             }
         }
         &.krovotochivost,
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(.5px, .9px);
+                transform: translate(.5px, .4px);
             }
         }
         &.parodontalnye_karmany,
@@ -1504,51 +1560,52 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(.8px, .7px);
+                transform: translate(.8px, .2px);
             }
         }
         &.koronka_razrushena {
             .tooth {
-                transform: translate(.7px, .7px);
+                transform: translate(.7px, .2px);
             }
         }
         &.treshina_nizhe_desny {
             .tooth {
-                transform: translate(.7px, .7px);
+                transform: translate(.7px, .2px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(1.1px, 1px);
+                transform: translate(1.1px, .5px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(.6px, 1.3px);
+                transform: translate(.6px, .8px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(.7px, 1.1px);
+                transform: translate(.7px, .6px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(.8px, .7px);
+                transform: translate(.8px, .2px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-1.3px, .7px);
+                transform: translate(-1.3px, .2px);
             }
         }
     }
     &--15 {
-        left: unset;
-        right: 0;
-        transform: translate(-94px, 92px);
+        transform: translate(368.5169143676758px, 91.299560546875px);
+        height: 27.781848907470703px;
+        width: 23.147727966308594px;
         .tooth {
-            transform: translate(-1px, .5px);
+            // transform: translate(-1px, .5px);
+            transform: translate(-1px, 0);
         }
         &.implant {
             transform: translate(-92px, 83px);
@@ -1595,7 +1652,7 @@
         &.krovotochivost,
         &.gnoj {
             .tooth {
-                transform: translate(-.4px, .4px);
+                transform: translate(-.4px, -.1px);
             }
         }
         &.nalet,
@@ -1614,57 +1671,58 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(-.2px, 1.2px);
+                transform: translate(-.2px, .7px);
             }
         }
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-.5px, 1.3px);
+                transform: translate(-.5px, .8px);
             }
         }
         &.parodontalnye_karmany {
             .tooth {
-                transform: translate(-.3px, 1.1px);
+                transform: translate(-.3px, .6px);
             }
         }
         &.koronka_razrushena,
         &.treshina_nizhe_desny {
             .tooth {
-                transform: translate(-.3px, 1.2px);
+                transform: translate(-.3px, .7px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(-.1px, .7px);
+                transform: translate(-.1px, .2px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(-.4px, 1px);
+                transform: translate(-.4px, .5px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-.4px, -.2px);
+                transform: translate(-.4px, -.7px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-.3px, 1px);
+                transform: translate(-.3px, .5px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-1.2px, 1.2px);
+                transform: translate(-1.2px, .7px);
             }
         }
     }
     &--16 {
-        left: unset;
-        right: 0;
-        transform: translate(-70px, 89px);
+        transform: translate(391.4668960571289px, 87.61283874511719px);
+        height: 26.92854118347168px;
+        width: 23.990020751953125px;
         .tooth {
-            transform: translate(1.1px, .5px);
+            // transform: translate(1.1px, .5px);
+            transform: translate(.5px, .5px);
         }
         &.implant {
             transform: translate(-69px, 79px);
@@ -1705,14 +1763,14 @@
         &.nalet,
         &.zubnoj_kamen {
             .tooth {
-                transform: translate(-.2px, .1px);
+                transform: translate(-.8px, .1px);
             }
         }
         &.krovotochivost,
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(.6px, .4px);
+                transform: translate(0, .4px);
             }
         }
         &.karies_mezialnyj,
@@ -1728,50 +1786,50 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(.8px, .2px);
+                transform: translate(.2px, .2px);
             }
         }
         &.parodontalnye_karmany {
             .tooth {
-                transform: translate(.7px, .2px);
+                transform: translate(.1px, .2px);
             }
         }
         &.koronka_razrushena,
         &.vestibulyarnyj,
         &.karies_prisheechnyj {
             .tooth {
-                transform: translate(.8px, 1.2px);
+                transform: translate(.2px, 1.2px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(1.8px, .4px);
+                transform: translate(1.2px, .4px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(.6px, 1px);
+                transform: translate(0, 1px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(.7px, -2.2px);
+                transform: translate(.1px, -2.2px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(.8px, .2px);
+                transform: translate(.2px, .2px);
             }
         }
         &.kornevaya_vkladka,
         &.build_up {
             .tooth {
-                transform: translate(3.3px, .5px);
+                transform: translate(2.7px, .5px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-1.2px, .2px);
+                transform: translate(-1.8px, .2px);
             }
         }
     }
@@ -1780,9 +1838,6 @@
 
     // BOTTOM JAW
     &--bottom {
-        top: unset;
-        left: 0;
-        bottom: 0;
         .tooth {
             bottom: 1px;
             left: 1px;
@@ -1790,9 +1845,12 @@
         }
     }
     &--17 {
-        transform: translate(74px, -45px);
+        transform: translate(72.90689849853516px, 171.181396484375px);
+        height: 27.389963150024414px;
+        width: 26.830001831054688px;
         .tooth {
-            transform: translate(.3px, -.3px);
+            // transform: translate(.3px, -.3px);
+            transform: translate(1.8px, .2px);
         }
         &.implant {
             transform: translate(80px, -40px);
@@ -1835,7 +1893,7 @@
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-.1px, -.5px);
+                transform: translate(1.4px, 0);
             }
         }
         &.nalet,
@@ -1858,30 +1916,33 @@
         &.vremennaya_koronka,
         &.elajner {
             .tooth {
-                transform: translate(.1px, -.6px);
+                transform: translate(1.6px, -.1px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(.2px, -.6px);
+                transform: translate(1.7px, -.1px);
             }
         }
         &.lechenie_kanalov_neudovlit,
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(0, 0);
+                transform: translate(1.5px, .5px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-.1px, -.6px);
+                transform: translate(1.4px, -.1px);
             }
         }
     }
     &--18 {
-        transform: translate(98px, -34px);
+        transform: translate(99.18689727783203px, 175.8914031982422px);
+        height: 32.951576232910156px;
+        width: 26.360000610351562px;
         .tooth {
-            transform: translate(1px, 0);
+            // transform: translate(1px, 0);
+            transform: translate(.2px, 0);
         }
         &.implant {
             transform: translate(101px, -35px);
@@ -1921,14 +1982,14 @@
         &.nalet,
         &.zubnoj_kamen {
             .tooth {
-                transform: translate(-.2px, 0);
+                transform: translate(-1px, 0);
             }
         }
         &.krovotochivost,
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(.6px, .2px);
+                transform: translate(-.2px, .2px);
             }
         }
         &.parodontalnye_karmany,
@@ -1948,36 +2009,39 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(.7px, -.3px);
+                transform: translate(-.1px, -.3px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(.8px, -.7px);
+                transform: translate(0, -.7px);
             }
         }
         &.lechenie_kanalov_neudovlit,
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(.6px, .2px);
+                transform: translate(-.2px, .2px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(.8px, .4px);
+                transform: translate(0, .4px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-1.2px, -.4px);
+                transform: translate(-2px, -.4px);
             }
         }
      
     }
     &--19 {
-        transform: translate(124px, -29px);
+        transform: translate(124.3335189819336px, 180.78140258789062px);
+        height: 32.83253860473633px;
+        width: 30.303394317626953px;
         .tooth {
-            transform: translate(-.9px, 0);
+            // transform: translate(-.9px, 0);
+            transform: translate(-.6px, .5px);
         }
         &.implant {
             transform: translate(126px, -32px);
@@ -2023,7 +2087,7 @@
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-.4px, -.1px);
+                transform: translate(-.1px, .4px);
             }
         }
         &.nalet,
@@ -2045,31 +2109,34 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(-.2px, -.4px);
+                transform: translate(.1px, .1px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(-.2px, -.6px);
+                transform: translate(.1px, -.1px);
             }
         }
         &.lechenie_kanalov_neudovlit,
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-.4px, .1px);
+                transform: translate(-.1px, .6px);
             }
         }
-        &.desnevaya_recessiya,
+        &.gingivit,
         &.elajner {
             .tooth {
-                transform: translate(-1.2px, -.3px);
+                transform: translate(-.9px, .2px);
             }
         }
     }
     &--20 {
-        transform: translate(152px, -25px);
+        transform: translate(152.31157684326172px, 186.44139099121094px);
+        height: 30.528553009033203px;
+        width: 19.115339279174805px;
         .tooth {
-            transform: translate(-1px, -.3px);
+            // transform: translate(-1px, -.3px);
+            transform: translate(-.7px, 0);
         }
         &.implant {
             transform: translate(151px, -28px);
@@ -2110,7 +2177,7 @@
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-.5px, -.3px);
+                transform: translate(-.2px, 0);
             }
         }
         &.nalet,
@@ -2132,32 +2199,35 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(-1.3px, -.7px);
+                transform: translate(-1px, -.4px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(-.4px, -.6px);
+                transform: translate(-.1px, -.3px);
             }
         }
         &.lechenie_kanalov_neudovlit,
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-.5px, -.1px);
+                transform: translate(-.2px, .2px);
             }
         }
-        &.desnevaya_recessiya,
+        &.gingivit,
         &.elajner {
             .tooth {
-                transform: translate(-1.2px, -.6px);
+                transform: translate(-.9px, -.3px);
             }
         }
       
     }
     &--21 {
-        transform: translate(170px, -22px);
+        transform: translate(170.89690399169922px, 189.33140563964844px);
+        height: 30.3800048828125px;
+        width: 17.419998168945312px;
         .tooth {
-            transform: translate(0, 0);
+            // transform: translate(0, 0);
+            transform: translate(-.2px, .2px);
         }
         &.implant {
             transform: translate(171px, -21px);
@@ -2199,13 +2269,13 @@
         &.zubnoj_kamen,
         &.parodontalnye_karmany {
             .tooth {
-                transform: translate(-.2px, -.5px);
+                transform: translate(-.4px, -.3px);
             }
         }
         &.krovotochivost,
         &.gnoj {
             .tooth {
-                transform: translate(-.4px, -.4px);
+                transform: translate(-.6px, -.2px);
             }
         }
         &.karies_mezialnyj,
@@ -2222,44 +2292,46 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(-.3px, -.4px);
+                transform: translate(-.5px, -.2px);
             }
         }
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-.5px, -.3px);
+                transform: translate(-.7px, -.1px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(-.4px, -.6px);
+                transform: translate(-.1px, .2px);
             }
         }
         &.pulpit,
         &.lechenie_kanalov_udovlit {
             .tooth {
-                transform: translate(-.1px, .3px);
+                transform: translate(-.4px, .7px);
             }
         }
         &.lechenie_kanalov_neudovlit,
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-.4px, .1px);
+                transform: translate(-.6px, .3px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-.2px, -.4px);
+                transform: translate(-.4px, -.2px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-2.3px, -.6px);
+                transform: translate(-2.5px, -.4px);
             }
         }
     }
     &--22 {
-        transform: translate(187px, -6px);
+        transform: translate(187.75690460205078px, 191.79832458496094px);
+        height: 43.2630500793457px;
+        width: 20.07000732421875px;
         .tooth {
             transform: translate(1px, 0);
         }
@@ -2345,7 +2417,7 @@
                 transform: translate(.6px, 0);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
                 transform: translate(-.2px, .6px);
             }
@@ -2363,9 +2435,11 @@
        
     }
     &--23 {
-        transform: translate(207px, -6px);
+        transform: translate(207.69690704345703px, 195.42063903808594px);
+        height: 39.81230163574219px;
+        width: 17.050003051757812px;
         .tooth {
-            transform: translate(-.8px, .3px);
+            transform: translate(-.9px, .3px);
         }
         &.implant {
             transform: translate(208px, -17px);
@@ -2412,7 +2486,7 @@
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-1.2px, .3px);
+                transform: translate(-1.3px, .3px);
             }
         }
         &.nalet,
@@ -2433,40 +2507,43 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(-1px, 0px);
+                transform: translate(-1.1px, 0px);
             }
         }
         &.koronka_razrushena {
             .tooth {
-                transform: translate(-.1px, 0);
+                transform: translate(-.2px, 0);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(-1.2px, -.4px);
+                transform: translate(-1.3px, -.4px);
             }
         }
         &.lechenie_kanalov_neudovlit,
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-1.2px, .6px);
+                transform: translate(-1.3px, .6px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-1.1px, .9px);
+                transform: translate(-1.2px, .9px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-2px, 0);
+                transform: translate(-2.1px, 0);
             }
         }
     }
     &--24 {
-        transform: translate(223px, -2px);
+        transform: translate(224.10794830322266px, 196.6681365966797px);
+        height: 42.064178466796875px;
+        width: 17.59893035888672px;
         .tooth {
-            transform: translate(0, 0);
+            // transform: translate(0, 0);
+            transform: translate(-.5px, 0);
         }
         &.implant {
             transform: translate(225px, -16px);
@@ -2506,13 +2583,13 @@
         &.krovotochivost,
         &.gnoj {
             .tooth {
-                transform: translate(.5px, -.2px);
+                transform: translate(0, -.2px);
             }
         }
         
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(.6px, .8px);
+                transform: translate(.1px, .8px);
             }
         }
 
@@ -2534,42 +2611,43 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(.8px, .6px);
+                transform: translate(.3px, .6px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(.2px, .1px);
+                transform: translate(-.3px, .1px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(.5px, .2px);
+                transform: translate(0, .2px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-.4px, 1.1px);
+                transform: translate(-.9px, 1.1px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-.3px, .7px);
+                transform: translate(-.8px, .7px);
             }
         }
         &.nakladka,
         &.elajner {
             .tooth {
-                transform: translate(-.2px, .7px);
+                transform: translate(-.7px, .7px);
             }
         }
     }
     &--25 {
-        left: unset;
-        right: 0;
-        transform: translate(-228px, -2px);
+        transform: translate(241.6069107055664px, 196.8813934326172px);
+        height: 42.05999755859375px;
+        width: 16.3px;
         .tooth {
-            transform: translate(-.5px, 0);
+            // transform: translate(-.5px, 0);
+            transform: translate(-1.7px, 0);
         }
         &.implant {
             transform: translate(-226px, -16px);
@@ -2616,7 +2694,7 @@
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(0, .7px);
+                transform: translate(-1.2px, .7px);
             }
         }   
 
@@ -2639,37 +2717,38 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(.3px, .6px);
+                transform: translate(-.9px, .6px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(.6px, .2px);
+                transform: translate(-.6px, .2px);
             }
         }
         &.lechenie_kanalov_neudovlit,
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(0, .2px);
+                transform: translate(-1.2px, .2px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(.2px, .7px);
+                transform: translate(-1px, .7px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-.8px, .6px);
+                transform: translate(-2px, .6px);
             }
         }
     }
     &--26 {
-        left: unset;
-        right: 0;
-        transform: translate(-213px, -5px);
+        transform: translate(257.6469192504883px, 195.56138610839844px);
+        height: 40.08699417114258px;
+        width: 16.139984130859375px;
         .tooth {
-            transform: translate(-1.7px, -.4px);
+            // transform: translate(-1.7px, -.4px);
+            transform: translate(-2px, -.4px);
         }
         &.implant {
             transform: translate(-209px, -17px);
@@ -2713,7 +2792,7 @@
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-2.2px, -.5px);
+                transform: translate(-2.5px, -.5px);
             }
         }   
 
@@ -2735,42 +2814,43 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(-2px, -.7px);
+                transform: translate(-2.3px, -.7px);
             }
         }
         &.koronka_razrushena {
             .tooth {
-                transform: translate(-1px, -.7px);
+                transform: translate(-1.3px, -.7px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(-1.1px, -1px);
+                transform: translate(-1.4px, -1px);
             }
         }
         &.lechenie_kanalov_neudovlit,
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-2.2px, -.1px);
+                transform: translate(-2.5px, -.1px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-2px, .3px);
+                transform: translate(-2.3px, .3px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-3px, -.6px);
+                transform: translate(-3.3px, -.6px);
             }
         }
     }
     &--27 {
-        left: unset;
-        right: 0;
-        transform: translate(-193px, -6px);
+        transform: translate(273.66690826416016px, 192.94139099121094px);
+        height: 42.27998352050781px;
+        width: 20px;
         .tooth {
-            transform: translate(.4px, .1px);
+            // transform: translate(.4px, .1px);
+            transform: translate(-.9px, .1px);
         }
         &.implant {
             transform: translate(-191px, -18px);
@@ -2817,7 +2897,7 @@
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-.1px, -.1px);
+                transform: translate(-1.4px, -.1px);
             }
         }   
 
@@ -2839,46 +2919,47 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(.2px, -.3px);
+                transform: translate(-1.1px, -.3px);
             }
         }
         &.koronka_razrushena {
             .tooth {
-                transform: translate(1.1px, 0);
+                transform: translate(-.2px, 0);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(.8px, -.6px);
+                transform: translate(-.5px, -.6px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(0, .3px);
+                transform: translate(-1.3px, .3px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-.1px, 1.2px);
+                transform: translate(-1.4px, 1.2px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(0, .8px);
+                transform: translate(-1.3px, .8px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-.9px, -.4px);
+                transform: translate(-2.2px, -.4px);
             }
         }
     }
     &--28 {
-        left: unset;
-        right: 0;
-        transform: translate(-175px, -22px);
+        transform: translate(293.55689239501953px, 189.8513946533203px);
+        height: 30.399993896484375px;
+        width: 17.543373107910156px;
         .tooth {
-            transform: translate(-1.5px, 0);
+            // transform: translate(-1.5px, 0);
+            transform: translate(-2.9px, 0);
         }
         &.implant {
             transform: translate(-172px, -21px);
@@ -2925,7 +3006,7 @@
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-1.1px, -.1px);
+                transform: translate(-2.5px, -.1px);
             }
         }   
 
@@ -2947,46 +3028,47 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(-1.9px, -.4px);
+                transform: translate(-3.3px, -.4px);
             }
         }
         &.koronka_razrushena {
             .tooth {
-                transform: translate(-.8px, -.4px);
+                transform: translate(-2.2px, -.4px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(-.5px, 0);
+                transform: translate(-1.9px, 0);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(-1px, -.6px);
+                transform: translate(-2.4px, -.6px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-1.1px, 1.2px);
+                transform: translate(-2.5px, 1.2px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-1.8px, .7px);
+                transform: translate(-3.2px, .7px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-3px, -.6px);
+                transform: translate(-4.4px, -.6px);
             }
         }
     }
     &--29 {
-        left: unset;
-        right: 0;
-        transform: translate(-156px, -25px);
+        transform: translate(310.56690216064453px, 186.9813995361328px);
+        height: 30.279409408569336px;
+        width: 19.48444175720215px;
         .tooth {
-            transform: translate(-1.5px, -.3px);
+            // transform: translate(-1.5px, -.3px);
+            transform: translate(-1.9px, -.3px);
         }
         &.implant {
             transform: translate(-153px, -27px);
@@ -3033,7 +3115,7 @@
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-1px, -.4px);
+                transform: translate(-1.4px, -.4px);
             }
         }   
 
@@ -3055,46 +3137,47 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(-1.8px, -.7px);
+                transform: translate(-2.2px, -.7px);
             }
         }
         &.koronka_razrushena {
             .tooth {
-                transform: translate(-.7px, -.7px);
+                transform: translate(-1.1px, -.7px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(-.8px, -.7px);
+                transform: translate(-1.2px, -.7px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(-1px, -.1px);
+                transform: translate(-1.4px, -.1px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-1px, -.1px);
+                transform: translate(-1.4px, -.1px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-1.8px, -.5px);
+                transform: translate(-2.2px, -.5px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-3.8px, -.7px);
+                transform: translate(-4.2px, -.7px);
             }
         }
     }
     &--30 {
-        left: unset;
-        right: 0;
-        transform: translate(-128px, -27px);
+        transform: translate(328.66690826416016px, 181.5013885498047px);
+        height: 34.092124938964844px;
+        width: 29.640972137451172px;
         .tooth {
-            transform: translate(-.6px, 0);
+            // transform: translate(-.6px, 0);
+            transform: translate(-1.8px, 0);
         }
         &.implant {
             transform: translate(-130px, -31px);
@@ -3131,7 +3214,7 @@
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-.3px, -.1px);
+                transform: translate(-1.5px, -.1px);
             }
         }   
 
@@ -3152,56 +3235,56 @@
         &.wax_up,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(0, -.3px);
+                transform: translate(-1.2px, -.3px);
             }
         }
         &.koronka_razrushena {
             .tooth {
-                transform: translate(-1px, -.5px);
+                transform: translate(-2.2px, -.5px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(.8px, -.8px);
+                transform: translate(-.4px, -.8px);
             }
         }
         &.pulpit,
         &.lechenie_kanalov_udovlit {
             .tooth {
-                transform: translate(.1px, .6px);
+                transform: translate(-1.1px, .6px);
             }
         }
         &.lechenie_kanalov_neudovlit {
             .tooth {
-                transform: translate(-.1px, .1px);
+                transform: translate(-1.3px, .1px);
             }
         }
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-.1px, .1px);
+                transform: translate(-1.3px, .1px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(.1px, .8px);
+                transform: translate(-1.1px, .8px);
             }
         }
         &.kornevaya_vkladka,
         &.build_up {
             .tooth {
-                transform: translate(1.9px, .3px);
+                transform: translate(.7px, .3px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-2.1px, -.3px);
+                transform: translate(-3.3px, -.3px);
             }
         }
     }
     &--31 {
-        left: unset;
-        right: 0;
-        transform: translate(-103px, -33px);
+        transform: translate(356.67691802978516px, 176.681396484375px);
+        height: 33.480010986328125px;
+        width: 26.409133911132812px;
         .tooth {
             transform: translate(-1.6px, 0);
         }
@@ -3292,7 +3375,7 @@
                 transform: translate(-2.1px, .2px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
                 transform: translate(-1.9px, .8px);
             }
@@ -3310,11 +3393,12 @@
         }
     }
     &--32 {
-        left: unset;
-        right: 0;
-        transform: translate(-79px, -45px);
+        transform: translate(382.78690338134766px, 170.96139526367188px);
+        height: 27.693090438842773px;
+        width: 24.466421127319336px;
         .tooth {
-            transform: translate(-1.6px, -.7px);
+            // transform: translate(-1.6px, -.7px);
+            transform: translate(-3px, -.2px);
         }
         &.implant {
             transform: translate(-79px, -40px);
@@ -3357,7 +3441,7 @@
         &.gnoj,
         &.podvizhnost_zubov {
             .tooth {
-                transform: translate(-1px, 0);
+                transform: translate(-2.4px, .5px);
             }
         }   
 
@@ -3377,46 +3461,46 @@
         &.kyuretazh,
         &.vremennaya_koronka {
             .tooth {
-                transform: translate(-.8px, -.2px);
+                transform: translate(-2.2px, .3px);
             }
         }
         &.karies_oklyuzionnyj {
             .tooth {
-                transform: translate(-1.3px, -.2px);
+                transform: translate(-2.7px, .3px);
             }
         }
         &.koronka_razrushena,
         &.wax_up {
             .tooth {
-                transform: translate(-1.8px, -.2px);
+                transform: translate(-3.2px, .3px);
             }
         }
         &.pulpit,
         &.lechenie_kanalov_udovlit {
             .tooth {
-                transform: translate(-.7px, -.1px);
+                transform: translate(-2.1px, .4px);
             }
         }
         &.lechenie_kanalov_neudovlit,
         &.slomannyj_instrument {
             .tooth {
-                transform: translate(-1px, .4px);
+                transform: translate(-2.4px, .4px);
             }
         }
-        &.desnevaya_recessiya {
+        &.gingivit {
             .tooth {
-                transform: translate(-.8px, .1px);
+                transform: translate(-2.2px, .6px);
             }
         }
         &.kornevaya_vkladka,
         &.build_up {
             .tooth {
-                transform: translate(1.4px, 0);
+                transform: translate(0, .5px);
             }
         }
         &.elajner {
             .tooth {
-                transform: translate(-2.9px, -.4px);
+                transform: translate(-4.3px, .1px);
             }
         }
     }
