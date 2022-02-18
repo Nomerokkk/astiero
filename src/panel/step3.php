@@ -98,40 +98,45 @@ include '../templates/header.php'; ?>
                                         'border' => 'normal',
                                     ],
                                     1 => [
-                                        'title' => 'Установка имплантата',
-                                        'dir' => 'ustanovka_implantata',
+                                        'title' => 'Установка имплантата (правильное положение)',
+                                        'dir' => 'ustanovka_implantata_prav',
                                         'border' => 'implant',
                                     ],
                                     2 => [
+                                        'title' => 'Установка имплантата (неправильное положение)',
+                                        'dir' => 'ustanovka_implantata_neprav',
+                                        'border' => 'implant',
+                                    ],
+                                    3 => [
                                         'title' => 'Костная пластика',
                                         'dir' => 'kostnaya_plastika',
                                         'format' => 'png',
                                         'border' => 'normal',
                                     ],
-                                    3 => [
+                                    4 => [
                                         'title' => 'Пластика десны',
                                         'dir' => 'lechenie_kanalov_neudovlit',
                                         'border' => 'normal',
                                     ],
-                                    4 => [
+                                    5 => [
                                         'title' => 'Синус-лифтинг (открытый / закрытый (крестальный))',
                                         'dir' => 'sinus',
                                         'border' => 'normal',
                                         'sinus' => 'two',
                                     ],
-                                    5 => [
+                                    6 => [
                                         'title' => 'Синус-лифтинг (открытый / закрытый (левый))',
                                         'dir' => 'sinus',
                                         'border' => 'normal',
                                         'sinus' => 'right',
                                     ],
-                                    6 => [
+                                    7 => [
                                         'title' => 'Синус-лифтинг (открытый / закрытый (правый))',
                                         'dir' => 'sinus',
                                         'border' => 'normal',
                                         'sinus' => 'left',
                                     ],
-                                    7 => [
+                                    8 => [
                                         'title' => 'Хирургический шаблон',
                                         'dir' => 'hirurgicheskij_shablon',
                                         'border' => 'small',
@@ -309,7 +314,7 @@ include '../templates/header.php'; ?>
                                                     $title = $i . '-й зуб';
                                                 ?>
 
-                                                    <div class="jaw-item jaw-item--<?= $i; ?> j-jaw-item <?= ($i > 16) ? 'jaw-item--bottom' : ''; ?>" 
+                                                    <div style="z-index: 1" class="jaw-item jaw-item--<?= $i; ?> j-jaw-item <?= ($i > 16) ? 'jaw-item--bottom' : ''; ?>" 
                                                         data-number="<?= $i; ?>" data-title="<?= $title; ?>">
                                                         <div class="border j-jaw-border">
                                                             <img src="<?= $border; ?>" alt="">
@@ -329,12 +334,12 @@ include '../templates/header.php'; ?>
                                                     $title = $i . '-й зуб';
                                                 ?>
 
-                                                    <div style="z-index: 1" class="jaw-item jaw-item--<?= $i; ?> j-jaw-item <?= ($i > 16) ? 'jaw-item--bottom' : ''; ?>" 
+                                                    <div class="jaw-item jaw-item--<?= $i; ?> <?= ($i > 16) ? 'jaw-item--bottom' : ''; ?>" 
                                                         data-number="<?= $i; ?>" data-title="<?= $title; ?>">
-                                                        <div class="border j-jaw-border" style="opacity: 0">
+                                                        <div class="border j-jaw-border">
                                                             <img src="<?= $border; ?>" alt="">
                                                         </div>
-                                                        <div class="tooth" style="-webkit-mask-image: url(<?= $tooth; ?>); mask-image: url(<?= $tooth; ?>);">
+                                                        <div class="tooth" style="opacity: 0; -webkit-mask-image: url(<?= $tooth; ?>); mask-image: url(<?= $tooth; ?>);">
                                                             <img src="<?= $tooth; ?>" alt="">
                                                         </div>
                                                         <div class="visual"></div>

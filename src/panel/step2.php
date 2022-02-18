@@ -173,11 +173,17 @@ include '../templates/header.php'; ?>
                                         'border' => 'normal',
                                     ],
                                     3 => [
+                                        'title' => 'Апикальный периодонтит',
+                                        'dir' => 'normal',
+                                        'border' => 'normal',
+                                        'visual' => 'apikalnyj_periodontit',
+                                    ],
+                                    4 => [
                                         'title' => 'Сломанный инструмент в канале',
                                         'dir' => 'slomannyj_instrument',
                                         'border' => 'normal',
                                     ],
-                                    4 => [
+                                    5 => [
                                         'title' => 'Перелом корня',
                                         'dir' => 'perelom_kornya',
                                         'border' => 'normal',
@@ -197,6 +203,11 @@ include '../templates/header.php'; ?>
                                         'border' => 'normal',
                                     ],
                                     2 => [
+                                        'title' => 'Десневая рецессия на имплант',
+                                        'dir' => 'desnevaja_recessija',
+                                        'border' => 'implant',
+                                    ],
+                                    3 => [
                                         'title' => 'Ретинированный',
                                         'dir' => 'retinirovannyj',
                                         'border' => 'normal',
@@ -212,8 +223,23 @@ include '../templates/header.php'; ?>
                                         'border' => 'normal',
                                     ],
                                     1 => [
+                                        'title' => 'Коронка',
+                                        'dir' => 'koronka',
+                                        'border' => 'normal',
+                                    ],
+                                    2 => [
+                                        'title' => 'Вкладка',
+                                        'dir' => 'vkladka',
+                                        'border' => 'normal',
+                                    ],
+                                    3 => [
                                         'title' => 'Накладка',
                                         'dir' => 'nakladka',
+                                        'border' => 'normal',
+                                    ],
+                                    4 => [
+                                        'title' => 'Пломба',
+                                        'dir' => 'plomba',
                                         'border' => 'normal',
                                     ],
                                 ],

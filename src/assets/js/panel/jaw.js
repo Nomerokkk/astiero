@@ -91,15 +91,15 @@ $tooth_item.on('click', function() {
 
 /********************SELECT PARAMETR***************/
 $radio.on('click', function() {
-    let $this = $(this),
+    let $this_radio = $(this),
         $tooth_item_active = $('.j-jaw-item.active'),
-        dir = $this.data('dir'),
-        dir_border = $this.data('border'),
-        class_ = $this.data('class'),
-        class_border = $this.data('class-border'),
-        format = $this.data('format'),
-        number = $this.data('number'),
-        sinus = $this.data('sinus');
+        dir = $this_radio.data('dir'),
+        dir_border = $this_radio.data('border'),
+        class_ = $this_radio.data('class'),
+        class_border = $this_radio.data('class-border'),
+        format = $this_radio.data('format'),
+        number = $this_radio.data('number'),
+        sinus = $this_radio.data('sinus');
 
     if(sinus == undefined) {
         //Change classes
@@ -149,9 +149,9 @@ $radio.on('click', function() {
         }
 
         //Add visual element
-        if($this.is('[data-visual]')) {
+        if($this_radio.is('[data-visual]')) {
             let $visual = $tooth_item_active.find('.visual'),
-                visual = $this.data('visual'),
+                visual = $this_radio.data('visual'),
                 src = visual + number + '.' + format,
                 $img = $('<img/>');
 
@@ -159,22 +159,94 @@ $radio.on('click', function() {
 
             $tooth_item_active.addClass(visual);
             $img.attr('src', src).appendTo($visual);  
+        } else {
+            let $visual = $tooth_item_active.find('.visual');
+
+            $visual.html('');
         }
 
+        // $tooth_item.each(function() {
+        //     let $this = $(this),
+        //         number = $this.data('number');
+
+        //     //Change classes
+        //     if(number >= 17) {
+        //         $this
+        //             .attr('class', 'j-jaw-item jaw-item jaw-item--bottom jaw-item--' + number)
+        //             .addClass(class_)
+        //             .addClass(class_border);
+        //     } else {
+        //         $this
+        //             .attr('class', 'j-jaw-item jaw-item jaw-item--' + number)
+        //             .addClass(class_)
+        //             .addClass(class_border);
+        //     }
+
+        //     //Change border
+        //     if(dir_border != '') {
+        //         let src = dir_border + number + '.svg',
+        //             $border_img = $this.find('.border img');
+
+        //         $this.removeClass(class_border).addClass(class_border);
+
+        //         $border_img.attr('src', src);
+        //     }
+
+        //     //Change img tooth
+        //     if(dir != '') {
+        //         let src = dir + number + '.' + format,
+        //             $tooth = $this.find('.tooth'),
+        //             $img = $this.find('.tooth > img');
+
+        //         $this.show();
+
+        //         $tooth.attr('style', '-webkit-mask-image: url(' + src + '); mask-image: url(' + src + ');');
+
+        //         $img.attr('src', src);
+
+        //         gsap.fromTo($this[0], {
+        //             opacity: 0,
+        //             duration: 0,
+        //         }, {
+        //             opacity: 1,
+        //             duration: .5,
+        //         });
+        //     } else {
+        //         $this.hide();
+        //     }
+
+        //     //Add visual element
+        //     if($this_radio.is('[data-visual]')) {
+        //         let $visual = $this.find('.visual'),
+        //             visual = $this_radio.data('visual'),
+        //             src = visual + number + '.' + format,
+        //             $img = $('<img/>');
+
+        //         $visual.html('');
+        //         console.log(src)
+        //         $this.addClass(visual);
+        //         $img.attr('src', src).appendTo($visual);  
+        //     } else {
+        //         let $visual = $this.find('.visual');
+
+        //         $visual.html('');
+        //     }
+        // });
+
         //Change if size full
-        if($this.is('[data-size]')) {
-            if(number >= 17) {
-                $tooth_item
-                    .attr('class', 'j-jaw-item active jaw-item jaw-item--bottom jaw-item--' + number)
-                    .addClass(class_)
-                    .addClass(class_border);
-            } else {
-                $tooth_item
-                    .attr('class', 'j-jaw-item active jaw-item jaw-item--' + number)
-                    .addClass(class_)
-                    .addClass(class_border);
-            }
-        }
+        // if($this.is('[data-size]')) {
+        //     if(number >= 17) {
+        //         $tooth_item
+        //             .attr('class', 'j-jaw-item active jaw-item jaw-item--bottom jaw-item--' + number)
+        //             .addClass(class_)
+        //             .addClass(class_border);
+        //     } else {
+        //         $tooth_item
+        //             .attr('class', 'j-jaw-item active jaw-item jaw-item--' + number)
+        //             .addClass(class_)
+        //             .addClass(class_border);
+        //     }
+        // }
 
     // if is sinus
     } else {

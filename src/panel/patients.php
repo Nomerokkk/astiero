@@ -139,7 +139,7 @@ include '../templates/header.php'; ?>
                                                     <div class="patients-item__title">
                                                         Планы лечения
                                                     </div>
-                                                    <a href="step5.php" class="btn btn--orange patients-item__btn">
+                                                    <a href="step4.php" class="btn btn--orange patients-item__btn">
                                                         12.08.2021 13:00
                                                     </a>
                                                 </div>
@@ -161,12 +161,9 @@ include '../templates/header.php'; ?>
                                                             <div class="patients-item__title">
                                                                 Родственные связи
                                                             </div>
-                                                            <select class="patients-item__select j-select">
-                                                                <option value="Мама">Мама</option>
-                                                                <option value="Папа">Папа</option>
-                                                                <option value="Брат">Брат</option>
-                                                                <option value="Друг">Друг</option>
-                                                            </select>
+                                                            <button class="btn btn--orange patients-item__btn" data-fancybox data-src="#add-relative">
+                                                                Добавить
+                                                            </button>
                                                         </div>
                                                     </div>    
                                                     <div class="patients-item__parents-col">
@@ -441,4 +438,36 @@ include '../templates/header.php'; ?>
         </div>
     </div>
 
+    <div class="modal modal--password" id="add-relative">
+        <form class="modal__inner j-form" data-modal="#ok-add-relative">
+            <div class="modal__title">
+                Родственная связь
+            </div>
+            <div class="input">
+                <input type="text" placeholder="Кем вам приходится?" data-required>
+            </div>
+            <button type="submit" class="btn btn--orange modal__btn">
+                Добавить
+            </button>
+        </form>
+    </div>
+    
+    <div class="modal modal--ok-patient" id="ok-add-relative">
+        <div class="modal__inner">
+            <div class="modal__icon">
+                <svg>
+                    <use xlink:href="<?= $target; ?>/img/modal/ok-check.svg#icon"/>
+                </svg>
+            </div>
+            <div class="modal__title">
+                Отлично!
+            </div>
+            <div class="modal__desc">
+                Вы успешно добавили родственника
+            </div>
+            <button type="button" class="btn btn--orange modal__btn" data-close>
+                Продолжить
+            </button>
+        </div>
+    </div>
 <? include '../templates/footer.php'; ?>
