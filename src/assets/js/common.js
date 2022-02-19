@@ -357,7 +357,7 @@ function init_phones(el) {
 	});
 
 	$document.on('click', '.iti__country', function() {
-		$el.trigger('focus');
+		$(this).closest('.phone').find('input').trigger('focus');
 	});
 }
 

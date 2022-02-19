@@ -4,7 +4,9 @@ include 'templates/header.php'; ?>
 	
     <div class="wrapper j-wrapper">
         <section class="banner j-parallax-bg-sec">
-            <div class="banner__bg j-lazy j-parallax-bg" data-src="<?= $target; ?>/img/home/banner.png"></div>
+            <div class="banner__bg">
+                <div class="banner__bg-inner j-lazy j-parallax-bg" data-src="<?= $target; ?>/img/home/banner.png"></div>
+            </div>
             <div class="container">
                 <div class="banner__wrapper">
                     <div class="banner__text">
