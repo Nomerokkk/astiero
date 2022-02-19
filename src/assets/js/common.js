@@ -313,7 +313,9 @@ $(function() {
 
 /*******************PHONES********************/
 function init_phones(el) {
-	let iti = intlTelInput(el, {
+	let $el = $(el);
+	
+	intlTelInput(el, {
 		initialCountry: 'auto',
 		preferredCountries: ['ua', 'ru', 'us'],
 		separateDialCode: true,
@@ -342,17 +344,20 @@ function init_phones(el) {
 		$this.removeClass('mask-added');
 	});
 
-	$(el).on('input', function() {
-		let $this = $(el),
-			placeholder = $this.attr('placeholder'),
+	$el.on('focus', function() {
+		let placeholder = $el.attr('placeholder'),
 			mask = placeholder.replace(/[_]/g, '9');
 			
-		if(!$this.is('.mask-added')) {
-			$this.val('');
-			$this.inputmask(mask);
+		if(!$el.is('.mask-added')) {
+			$el.val('');
+			$el.inputmask(mask);
 
-			$this.addClass('mask-added')
+			$el.addClass('mask-added')
 		}
+	});
+
+	$document.on('click', '.iti__country', function() {
+		$el.trigger('focus');
 	});
 }
 

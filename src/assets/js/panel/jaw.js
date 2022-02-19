@@ -102,136 +102,136 @@ $radio.on('click', function() {
         sinus = $this_radio.data('sinus');
 
     if(sinus == undefined) {
-        //Change classes
-        if(number >= 17) {
-            $tooth_item_active
-                .attr('class', 'j-jaw-item active jaw-item jaw-item--bottom jaw-item--' + number)
-                .addClass(class_)
-                .addClass(class_border);
-        } else {
-            $tooth_item_active
-                .attr('class', 'j-jaw-item active jaw-item jaw-item--' + number)
-                .addClass(class_)
-                .addClass(class_border);
-        }
+        // //Change classes
+        // if(number >= 17) {
+        //     $tooth_item_active
+        //         .attr('class', 'j-jaw-item active jaw-item jaw-item--bottom jaw-item--' + number)
+        //         .addClass(class_)
+        //         .addClass(class_border);
+        // } else {
+        //     $tooth_item_active
+        //         .attr('class', 'j-jaw-item active jaw-item jaw-item--' + number)
+        //         .addClass(class_)
+        //         .addClass(class_border);
+        // }
 
-        //Change border
-        if(dir_border != '') {
-            let src = dir_border + number + '.svg',
-                $border_img = $tooth_item_active.find('.border img');
+        // //Change border
+        // if(dir_border != '') {
+        //     let src = dir_border + number + '.svg',
+        //         $border_img = $tooth_item_active.find('.border img');
 
-            $tooth_item_active.removeClass(class_border).addClass(class_border);
+        //     $tooth_item_active.removeClass(class_border).addClass(class_border);
 
-            $border_img.attr('src', src);
-        }
+        //     $border_img.attr('src', src);
+        // }
 
-        //Change img tooth
-        if(dir != '') {
-            let src = dir + number + '.' + format,
-                $tooth = $tooth_item_active.find('.tooth'),
-                $img = $tooth_item_active.find('.tooth > img');
+        // //Change img tooth
+        // if(dir != '') {
+        //     let src = dir + number + '.' + format,
+        //         $tooth = $tooth_item_active.find('.tooth'),
+        //         $img = $tooth_item_active.find('.tooth > img');
 
-            $tooth_item_active.show();
+        //     $tooth_item_active.show();
 
-            $tooth.attr('style', '-webkit-mask-image: url(' + src + '); mask-image: url(' + src + ');');
+        //     $tooth.attr('style', '-webkit-mask-image: url(' + src + '); mask-image: url(' + src + ');');
 
-            $img.attr('src', src);
+        //     $img.attr('src', src);
 
-            gsap.fromTo($tooth_item_active[0], {
-                opacity: 0,
-                duration: 0,
-            }, {
-                opacity: 1,
-                duration: .5,
-            });
-        } else {
-            $tooth_item_active.hide();
-        }
+        //     gsap.fromTo($tooth_item_active[0], {
+        //         opacity: 0,
+        //         duration: 0,
+        //     }, {
+        //         opacity: 1,
+        //         duration: .5,
+        //     });
+        // } else {
+        //     $tooth_item_active.hide();
+        // }
 
-        //Add visual element
-        if($this_radio.is('[data-visual]')) {
-            let $visual = $tooth_item_active.find('.visual'),
-                visual = $this_radio.data('visual'),
-                src = visual + number + '.' + format,
-                $img = $('<img/>');
+        // //Add visual element
+        // if($this_radio.is('[data-visual]')) {
+        //     let $visual = $tooth_item_active.find('.visual'),
+        //         visual = $this_radio.data('visual'),
+        //         src = visual + number + '.' + format,
+        //         $img = $('<img/>');
 
-            $visual.html('');
+        //     $visual.html('');
 
-            $tooth_item_active.addClass(visual);
-            $img.attr('src', src).appendTo($visual);  
-        } else {
-            let $visual = $tooth_item_active.find('.visual');
+        //     $tooth_item_active.addClass(visual);
+        //     $img.attr('src', src).appendTo($visual);  
+        // } else {
+        //     let $visual = $tooth_item_active.find('.visual');
 
-            $visual.html('');
-        }
+        //     $visual.html('');
+        // }
 
-        // $tooth_item.each(function() {
-        //     let $this = $(this),
-        //         number = $this.data('number');
+        $tooth_item.each(function() {
+            let $this = $(this),
+                number = $this.data('number');
 
-        //     //Change classes
-        //     if(number >= 17) {
-        //         $this
-        //             .attr('class', 'j-jaw-item jaw-item jaw-item--bottom jaw-item--' + number)
-        //             .addClass(class_)
-        //             .addClass(class_border);
-        //     } else {
-        //         $this
-        //             .attr('class', 'j-jaw-item jaw-item jaw-item--' + number)
-        //             .addClass(class_)
-        //             .addClass(class_border);
-        //     }
+            //Change classes
+            if(number >= 17) {
+                $this
+                    .attr('class', 'j-jaw-item jaw-item jaw-item--bottom jaw-item--' + number)
+                    .addClass(class_)
+                    .addClass(class_border);
+            } else {
+                $this
+                    .attr('class', 'j-jaw-item jaw-item jaw-item--' + number)
+                    .addClass(class_)
+                    .addClass(class_border);
+            }
 
-        //     //Change border
-        //     if(dir_border != '') {
-        //         let src = dir_border + number + '.svg',
-        //             $border_img = $this.find('.border img');
+            //Change border
+            if(dir_border != '') {
+                let src = dir_border + number + '.svg',
+                    $border_img = $this.find('.border img');
 
-        //         $this.removeClass(class_border).addClass(class_border);
+                $this.removeClass(class_border).addClass(class_border);
 
-        //         $border_img.attr('src', src);
-        //     }
+                $border_img.attr('src', src);
+            }
 
-        //     //Change img tooth
-        //     if(dir != '') {
-        //         let src = dir + number + '.' + format,
-        //             $tooth = $this.find('.tooth'),
-        //             $img = $this.find('.tooth > img');
+            //Change img tooth
+            if(dir != '') {
+                let src = dir + number + '.' + format,
+                    $tooth = $this.find('.tooth'),
+                    $img = $this.find('.tooth > img');
 
-        //         $this.show();
+                $this.show();
 
-        //         $tooth.attr('style', '-webkit-mask-image: url(' + src + '); mask-image: url(' + src + ');');
+                $tooth.attr('style', '-webkit-mask-image: url(' + src + '); mask-image: url(' + src + ');');
 
-        //         $img.attr('src', src);
+                $img.attr('src', src);
 
-        //         gsap.fromTo($this[0], {
-        //             opacity: 0,
-        //             duration: 0,
-        //         }, {
-        //             opacity: 1,
-        //             duration: .5,
-        //         });
-        //     } else {
-        //         $this.hide();
-        //     }
+                gsap.fromTo($this[0], {
+                    opacity: 0,
+                    duration: 0,
+                }, {
+                    opacity: 1,
+                    duration: .5,
+                });
+            } else {
+                $this.hide();
+            }
 
-        //     //Add visual element
-        //     if($this_radio.is('[data-visual]')) {
-        //         let $visual = $this.find('.visual'),
-        //             visual = $this_radio.data('visual'),
-        //             src = visual + number + '.' + format,
-        //             $img = $('<img/>');
+            //Add visual element
+            if($this_radio.is('[data-visual]')) {
+                let $visual = $this.find('.visual'),
+                    visual = $this_radio.data('visual'),
+                    src = visual + number + '.' + format,
+                    $img = $('<img/>');
 
-        //         $visual.html('');
-        //         console.log(src)
-        //         $this.addClass(visual);
-        //         $img.attr('src', src).appendTo($visual);  
-        //     } else {
-        //         let $visual = $this.find('.visual');
+                $visual.html('');
+                console.log(src)
+                $this.addClass(visual);
+                $img.attr('src', src).appendTo($visual);  
+            } else {
+                let $visual = $this.find('.visual');
 
-        //         $visual.html('');
-        //     }
-        // });
+                $visual.html('');
+            }
+        });
 
         //Change if size full
         // if($this.is('[data-size]')) {
