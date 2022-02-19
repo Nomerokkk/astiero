@@ -23,24 +23,19 @@ html {
 	width: 100%;
 	max-width: 100%;
 	min-height: 100%;
+	overflow-x: hidden;
 }
 body {
-	overflow-x: hidden;
+	overflow: hidden;
 	position: relative;
 	display: block;
 	min-width: 320px;
 	margin: 0;
+	padding: 0 !important;
 	background: #fff;
 	font-family: $font;
 	line-height: 1.2;
 	color: $black;
-	@media all and (min-width: 1201px) {
-		&.compensate-for-scrollbar {
-			.header {
-				padding-right: 37px;
-			}
-		}
-	}
 }
 ul, ol {
 	margin: 0;
