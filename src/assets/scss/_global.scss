@@ -23,19 +23,33 @@ html {
 	width: 100%;
 	max-width: 100%;
 	min-height: 100%;
-	overflow-x: hidden;
 }
 body {
-	overflow: hidden;
+	overflow-x: hidden;
 	position: relative;
 	display: block;
 	min-width: 320px;
+	width: 100%;
 	margin: 0;
-	padding: 0 !important;
+	padding: 0;
 	background: #fff;
 	font-family: $font;
 	line-height: 1.2;
 	color: $black;
+	@media all and (min-width: 1601px) {
+		&.compensate-for-scrollbar {
+			.header {
+				padding-right: 37px;
+			}
+		}
+	}
+	@media all and (min-width: 1201px) and (max-width: 1600px) {
+		&.compensate-for-scrollbar {
+			.header {
+				padding-right: 7px !important;
+			}
+		}
+	}
 }
 ul, ol {
 	margin: 0;

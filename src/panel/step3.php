@@ -79,11 +79,16 @@ include '../templates/header.php'; ?>
                                 'title' => 'Терапия и эндодонтия',
                                 'sub' => [
                                     0 => [
+                                        'title' => 'Пломба',
+                                        'dir' => 'plomba',
+                                        'border' => 'normal',
+                                    ],
+                                    1 => [
                                         'title' => 'Лечение корневых каналов удовлетворительно',
                                         'dir' => 'lechenie_kanalov_udovlit',
                                         'border' => 'normal',
                                     ],
-                                    1 => [
+                                    2 => [
                                         'title' => 'Лечение корневых каналов неудовлетворительно',
                                         'dir' => 'lechenie_kanalov_neudovlit',
                                         'border' => 'normal',
@@ -115,8 +120,9 @@ include '../templates/header.php'; ?>
                                     ],
                                     4 => [
                                         'title' => 'Пластика десны',
-                                        'dir' => 'lechenie_kanalov_neudovlit',
+                                        'dir' => 'normal',
                                         'border' => 'normal',
+                                        'visual' => 'plastika_desny'
                                     ],
                                     5 => [
                                         'title' => 'Синус-лифтинг (открытый / закрытый (крестальный))',
@@ -175,7 +181,7 @@ include '../templates/header.php'; ?>
                                         'title' => 'Адгезивный мостовидный протез',
                                         'dir' => 'adgezivnyj_protez',
                                         'border' => 'small',
-                                        'visual' => true,
+                                        'visual' => 'adgezivnyj_protez',
                                     ],
                                     6 => [
                                         'title' => 'Абатмент',
@@ -195,8 +201,9 @@ include '../templates/header.php'; ?>
                                     ],
                                     2 => [
                                         'title' => 'Минимпланты',
-                                        'dir' => 'mini_implant',
-                                        'border' => 'mini_implant',
+                                        'dir' => 'normal',
+                                        'border' => 'normal',
+                                        'visual' => 'mini_implant'
                                     ],
                                     3 => [
                                         'title' => 'Елайнеры',
@@ -206,9 +213,9 @@ include '../templates/header.php'; ?>
                                     ],
                                     4 => [
                                         'title' => 'Ретейнер',
-                                        'dir' => 'retejner',
+                                        'dir' => 'normal',
                                         'border' => 'normal',
-                                        'visual' => true,
+                                        'visual' => 'retejner',
                                     ],
                                 ],
                             ],
@@ -281,7 +288,11 @@ include '../templates/header.php'; ?>
                     <div class="step__row">
                         <div class="step__col">
                             <div class="step-img">
-                                <div class="step-img__loader j-jaw-loader"></div>
+                                <div class="step-img__loader active j-jaw-loader">
+                                    <div class="step-img__loader-inner">
+                                        <img src="<?= $target; ?>/img/loader.svg" alt="" role="presentation">
+                                    </div>
+                                </div>
                                 <div class="step-img__top">
                                     <div class="step-img__zoom j-zoom-btn">
                                     <svg>
@@ -305,49 +316,107 @@ include '../templates/header.php'; ?>
                                                 <img src="<?= $target; ?>/img/jaw/gum-bottom.svg" alt="">
                                             </div>
                                             <div class="jaw__teeth">
+                                                
+                                                <!-- TEETH -->
+                                                <? $i = 0;
 
-                                                <!-- TOP JAW -->
-                                                <? for($i = 1; $i < 33; $i++) {                                                     
+                                                $teeth = [
+                                                    0 => '18',
+                                                    1 => '17',
+                                                    2 => '16',
+                                                    3 => '15',
+                                                    4 => '14',
+                                                    5 => '13',
+                                                    6 => '12',
+                                                    7 => '11',
+
+                                                    8 => '21',
+                                                    9 => '22',
+                                                    10 => '23',
+                                                    11 => '24',
+                                                    12 => '25',
+                                                    13 => '26',
+                                                    14 => '27',
+                                                    15 => '28',
+
+                                                    16 => '48',
+                                                    17 => '47',
+                                                    18 => '46',
+                                                    19 => '45',
+                                                    20 => '44',
+                                                    21 => '43',
+                                                    22 => '42',
+                                                    23 => '41',
+
+                                                    24 => '31',
+                                                    25 => '32',
+                                                    26 => '33',
+                                                    27 => '34',
+                                                    28 => '35',
+                                                    29 => '36',
+                                                    30 => '37',
+                                                    31 => '38',
+                                                ];
+                                                
+                                                foreach($teeth as $item) {  
+                                                    $i++;
+
                                                     $border = $target . '/img/jaw/border/normal/' . $i . '.svg';
                                                     $tooth = $target . '/img/jaw/teeth/normal/' . $i . '.svg';
 
-                                                    $title = $i . '-й зуб';
+                                                    $title = $item . '-й зуб';
+
+                                                    $class = 'jaw-item jaw-item--' . $i . ' j-jaw-item';
+
+                                                    if($i > 16) {
+                                                        $class .= ' jaw-item--bottom';
+                                                    }
                                                 ?>
 
-                                                    <div style="z-index: 1" class="jaw-item jaw-item--<?= $i; ?> j-jaw-item <?= ($i > 16) ? 'jaw-item--bottom' : ''; ?>" 
-                                                        data-number="<?= $i; ?>" data-title="<?= $title; ?>">
+                                                    <div class="<?= $class; ?>" 
+                                                        data-base-class="<?= $class; ?>"
+                                                        data-number="<?= $i; ?>" 
+                                                        data-title="<?= $title; ?>">
                                                         <div class="border j-jaw-border">
                                                             <img src="<?= $border; ?>" alt="">
                                                         </div>
                                                         <div class="tooth" style="-webkit-mask-image: url(<?= $tooth; ?>); mask-image: url(<?= $tooth; ?>);">
                                                             <img src="<?= $tooth; ?>" alt="">
                                                         </div>
-                                                        <div class="visual"></div>
                                                     </div>
 
                                                 <? } ?>
 
-                                                <!-- <? for($i = 1; $i < 33; $i++) {                                                     
-                                                    $border = $target . '/img/jaw/border/normal/' . $i . '.svg';
-                                                    $tooth = $target . '/img/jaw/teeth/normal/' . $i . '.svg';
+                                                <!-- VISUAL -->
+                                                <? $i = 0;
+                                                
+                                                foreach($teeth as $item) {      
+                                                    $i++;
 
-                                                    $title = $i . '-й зуб';
+                                                    $border = $target . '/img/jaw/border/normal/' . $i . '.svg';
+                                                    $tooth = $target . '/img/jaw/teeth_done/normal/' . $i . '.svg';
+
+                                                    $title = $item . '-й зуб';
+
+                                                    $class = 'jaw-item jaw-item--visual jaw-item--' . $i . ' j-jaw-item';
+
+                                                    if($i > 16) {
+                                                        $class .= ' jaw-item--bottom';
+                                                    }
                                                 ?>
 
-                                                    <div class="jaw-item jaw-item--<?= $i; ?> <?= ($i > 16) ? 'jaw-item--bottom' : ''; ?>" 
-                                                        data-number="<?= $i; ?>" data-title="<?= $title; ?>">
+                                                    <div class="<?= $class; ?>" 
+                                                        data-base-class="<?= $class; ?>"
+                                                        data-number="<?= $i; ?>" 
+                                                        data-title="<?= $title; ?>">
                                                         <div class="border j-jaw-border">
                                                             <img src="<?= $border; ?>" alt="">
-                                                        </div>
-                                                        <div class="tooth" style="opacity: 0; -webkit-mask-image: url(<?= $tooth; ?>); mask-image: url(<?= $tooth; ?>);">
-                                                            <img src="<?= $tooth; ?>" alt="">
                                                         </div>
                                                         <div class="visual"></div>
                                                     </div>
 
-                                                <? } ?> -->
-
-                                                
+                                                <? } ?>
+     
                                             </div>
                                         </div>
                                     </div>
@@ -357,6 +426,12 @@ include '../templates/header.php'; ?>
                                         <use xlink:href="<?= $target; ?>/img/steps/reset.svg#icon"/>
                                     </svg>
                                     <span>Сбросить фильтр</span>
+                                </div>
+                                <div class="step-img__apply j-apply">
+                                    <svg>
+                                        <use xlink:href="<?= $target; ?>/img/steps/reset.svg#icon"/>
+                                    </svg>
+                                    <span>Применить</span>
                                 </div>
                             </div>
                         </div>

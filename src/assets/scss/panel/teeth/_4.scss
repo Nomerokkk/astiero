@@ -1,0 +1,119 @@
+.jaw-item {
+    &--4 {
+        transform: translate(142.9px, 85.24px);
+        width: 14px;
+        .tooth {
+            // transform: translate(-.35px, 1px);
+            transform: translate(-2px, .6px);
+        }
+        &.implant {
+            transform: translate(145px, 86px);
+            width: 10.9px;
+        }
+        &.abatment {
+            .tooth {
+                transform: translate(-5.6px, 0);
+            }
+        }
+        &.small {
+            transform: translate(141.2px, 117px);
+        }
+        &.retinirovannyj {
+            top: -13px;
+        }
+        &.kostnaya_plastika {
+            .tooth {
+                top: -3px;
+            }
+        }
+
+        // step1
+        &.poterya_kosti {
+            .tooth {
+                transform: translate(-3px, .6px);
+            }
+        }
+
+        &.gnoj,
+        &.krovotochivost,
+        &.podvizhnost_zubov {
+            .tooth {
+                transform: translate(-2.2px, .6px);
+            }
+        }
+
+        &.karies_oklyuzionnyj {
+            .tooth {
+                transform: translate(-2.3px, .6px);
+            }
+        }
+        &.lechenie_kanalov_neudovlit {
+            .tooth {
+                transform: translate(-2.2px, 1.2px);
+            }
+        }
+        &.slomannyj_instrument {
+            .tooth {
+                transform: translate(-2.2px, .1px);
+            }
+        }
+        &.wax_up {
+            .tooth {
+                transform: translate(-2.7px, 1px);
+            }
+        }
+        &.kornevaya_vkladka,
+        &.build_up {
+            .tooth {
+                transform: translate(.9px, .5px);
+            }
+        }
+        &.elajner {
+            .tooth {
+                transform: translate(-2.7px, .6px);
+            }
+        }
+
+        &.apikalnyj_periodontit {
+            .visual {
+                left: 1px;
+                top: -1px;
+            }
+        }
+
+        &.brekety {
+            .visual {
+                transform: translate(-1.9px, 40.1px);
+            }
+        }
+
+        &.mini_implant {
+            .visual {
+                top: 2px;
+                right: -6px;
+            }
+        }
+
+        &.retejner {
+            .visual {
+                transform: translate(-2.5px, 36.7px);
+            }
+        }
+
+        &.semnyj_protez {
+            .visual {
+                transform: translate(0, 3px);
+            }
+        }
+
+        &.plastika_desny {
+            .visual {
+                transform: translate(.6px, 23.6px);
+            }
+        }
+
+        &.poterya_kosti {
+            transform: translate(140.2px, 111.7px);
+        }
+    }
+}

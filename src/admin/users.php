@@ -52,8 +52,13 @@ include '../templates/header.php'; ?>
                     </div>
                     <div class="users__top-col">
                         <form class="search">
+                            <div class="search__clear j-search-clear">
+                                <svg>
+                                    <use xlink:href="<?= $target; ?>/img/icons.svg#close"/>
+                                </svg>
+                            </div>
                             <div class="input">
-                                <input type="text" placeholder="Поиск">
+                                <input type="text" class="j-search" placeholder="Поиск">
                             </div>
                             <button class="search__btn" type="submit">
                                 <svg>

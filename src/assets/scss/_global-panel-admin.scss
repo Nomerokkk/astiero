@@ -221,6 +221,26 @@
             &:focus {
                 border-color: $orange;
             }
+            &.active {
+                padding-left: 26px !important;
+            }
+        }
+    }
+    &__clear {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        fill: $orange;
+        cursor: pointer;
+        transition: .2s fill ease;
+        z-index: 1;
+        display: none;
+        &:hover {
+            fill: red;
+        }
+        svg {
+            width: 16px;
+            height: 16px;
         }
     }
     &__btn {

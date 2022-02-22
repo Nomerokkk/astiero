@@ -2,7 +2,8 @@ const $tooth_item = $('.j-jaw-item'),
     $title_jaw = $('.j-title-jaw'),
     $radio = $('.j-tooth-radio'),
     $loader = $('.j-jaw-loader'),
-    $zoom_btn = $('.j-zoom-btn');
+    $zoom_btn = $('.j-zoom-btn'),
+    $apply_btn = $('.j-apply');
 
 let pan;
 
@@ -20,12 +21,17 @@ if($('.j-panzoom').length > 0) {
         });
         
         gsap.to($loader[0], {
-            display: 'none',
             opacity: 0,
+            duration: .4,
+            onComplete: function() {
+                $loader.removeClass('active');
+            }
         })
+
+        change_size_jaw();
     });
 
-    $window.on('resize', function() {
+    function change_size_jaw() {
         pan.zoomTo(1)
 
         if($window.width() < 486) {
@@ -41,7 +47,9 @@ if($('.j-panzoom').length > 0) {
         }
 
         $zoom_btn.removeClass('active');
-    });
+    }
+
+    $window.on('resize', change_size_jaw);
 }
 
 /*********************ZOOM BTN******************/
@@ -50,11 +58,18 @@ $zoom_btn.on('click', function() {
 
     pan.toggleZoom();
 
-    if(!$this.is('.active')) {            
-        gsap.to('.j-jaw', {
-            scale: 2,
-            duration: .3,
-        });
+    if(!$this.is('.active')) {    
+        if($window.width() < 486) {        
+            gsap.to('.j-jaw', {
+                scale: 1.7,
+                duration: .3,
+            });
+        } else {
+            gsap.to('.j-jaw', {
+                scale: 2,
+                duration: .3,
+            });
+        }
 
         $this.addClass('active');
 
@@ -89,6 +104,11 @@ $tooth_item.on('click', function() {
     $radio.data('number', number);
 });
 
+/**************APPLY BTN*************/
+$apply_btn.on('click', function() {
+    $apply_btn.removeClass('show');
+});
+
 /********************SELECT PARAMETR***************/
 $radio.on('click', function() {
     let $this_radio = $(this),
@@ -100,6 +120,8 @@ $radio.on('click', function() {
         format = $this_radio.data('format'),
         number = $this_radio.data('number'),
         sinus = $this_radio.data('sinus');
+        
+    $apply_btn.addClass('show');
 
     if(sinus == undefined) {
         // //Change classes
@@ -169,18 +191,13 @@ $radio.on('click', function() {
             let $this = $(this),
                 number = $this.data('number');
 
+            $this.hide();
+            
             //Change classes
-            if(number >= 17) {
-                $this
-                    .attr('class', 'j-jaw-item jaw-item jaw-item--bottom jaw-item--' + number)
-                    .addClass(class_)
-                    .addClass(class_border);
-            } else {
-                $this
-                    .attr('class', 'j-jaw-item jaw-item jaw-item--' + number)
-                    .addClass(class_)
-                    .addClass(class_border);
-            }
+            $this
+                .attr('class', $this.data('base-class'))
+                .addClass(class_)
+                .addClass(class_border);
 
             //Change border
             if(dir_border != '') {
@@ -198,21 +215,17 @@ $radio.on('click', function() {
                     $tooth = $this.find('.tooth'),
                     $img = $this.find('.tooth > img');
 
-                $this.show();
-
                 $tooth.attr('style', '-webkit-mask-image: url(' + src + '); mask-image: url(' + src + ');');
 
                 $img.attr('src', src);
 
-                gsap.fromTo($this[0], {
-                    opacity: 0,
-                    duration: 0,
-                }, {
-                    opacity: 1,
-                    duration: .5,
+                $this.find('img').bind('load', function() {
+                    $this.fadeIn(400);
+    
+                    $(this).unbind('load');
                 });
             } else {
-                $this.hide();
+                $this.stop().hide();
             }
 
             //Add visual element
@@ -223,7 +236,6 @@ $radio.on('click', function() {
                     $img = $('<img/>');
 
                 $visual.html('');
-                console.log(src)
                 $this.addClass(visual);
                 $img.attr('src', src).appendTo($visual);  
             } else {

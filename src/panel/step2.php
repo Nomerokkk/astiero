@@ -198,9 +198,9 @@ include '../templates/header.php'; ?>
                                         'border' => 'normal',
                                     ],
                                     1 => [
-                                        'title' => 'Имплантат (потеря кости)',
+                                        'title' => 'Потеря кости вокруг импланта',
                                         'dir' => 'poterya_kosti',
-                                        'border' => 'normal',
+                                        'border' => 'poterya_kosti',
                                     ],
                                     2 => [
                                         'title' => 'Десневая рецессия на имплант',
@@ -241,6 +241,12 @@ include '../templates/header.php'; ?>
                                         'title' => 'Пломба',
                                         'dir' => 'plomba',
                                         'border' => 'normal',
+                                    ],
+                                    5 => [
+                                        'title' => 'Съемный протез (частичный / полный)',
+                                        'dir' => 'semnyj_protez',
+                                        'border' => 'small',
+                                        'visual' => 'semnyj_protez',
                                     ],
                                 ],
                             ],
@@ -304,7 +310,11 @@ include '../templates/header.php'; ?>
                     <div class="step__row">
                         <div class="step__col">
                             <div class="step-img">
-                                <div class="step-img__loader j-jaw-loader"></div>
+                                <div class="step-img__loader active j-jaw-loader">
+                                    <div class="step-img__loader-inner">
+                                        <img src="<?= $target; ?>/img/loader.svg" alt="" role="presentation">
+                                    </div>
+                                </div>
                                 <div class="step-img__top">
                                     <div class="step-img__zoom j-zoom-btn">
                                     <svg>
@@ -327,7 +337,7 @@ include '../templates/header.php'; ?>
                                             </div>
                                             <div class="jaw__teeth">
 
-                                                <!-- TOP JAW -->
+                                                <!-- TEETH -->
                                                 <? $i = 0;
 
                                                 $teeth = [
@@ -375,15 +385,52 @@ include '../templates/header.php'; ?>
                                                     $tooth = $target . '/img/jaw/teeth/normal/' . $i . '.svg';
 
                                                     $title = $item . '-й зуб';
+
+                                                    $class = 'jaw-item jaw-item--' . $i . ' j-jaw-item';
+
+                                                    if($i > 16) {
+                                                        $class .= ' jaw-item--bottom';
+                                                    }
                                                 ?>
 
-                                                    <div class="jaw-item jaw-item--<?= $i; ?> j-jaw-item <?= ($i > 16) ? 'jaw-item--bottom' : ''; ?>" 
-                                                        data-number="<?= $i; ?>" data-title="<?= $title; ?>">
+                                                    <div class="<?= $class; ?>" 
+                                                        data-base-class="<?= $class; ?>"
+                                                        data-number="<?= $i; ?>" 
+                                                        data-title="<?= $title; ?>">
                                                         <div class="border j-jaw-border">
                                                             <img src="<?= $border; ?>" alt="">
                                                         </div>
                                                         <div class="tooth" style="-webkit-mask-image: url(<?= $tooth; ?>); mask-image: url(<?= $tooth; ?>);">
                                                             <img src="<?= $tooth; ?>" alt="">
+                                                        </div>
+                                                    </div>
+
+                                                <? } ?>
+                                                
+                                                <!-- VISUAL -->
+                                                <? $i = 0;
+                                                
+                                                foreach($teeth as $item) {  
+                                                    $i++;
+
+                                                    $border = $target . '/img/jaw/border/normal/' . $i . '.svg';
+                                                    $tooth = $target . '/img/jaw/teeth/normal/' . $i . '.svg';
+
+                                                    $title = $item . '-й зуб';
+
+                                                    $class = 'jaw-item jaw-item--visual jaw-item--' . $i . ' j-jaw-item';
+
+                                                    if($i > 16) {
+                                                        $class .= ' jaw-item--bottom';
+                                                    }
+                                                ?>
+
+                                                    <div class="<?= $class; ?>" 
+                                                        data-base-class="<?= $class; ?>"
+                                                        data-number="<?= $i; ?>" 
+                                                        data-title="<?= $title; ?>">
+                                                        <div class="border j-jaw-border">
+                                                            <img src="<?= $border; ?>" alt="">
                                                         </div>
                                                         <div class="visual"></div>
                                                     </div>
@@ -399,6 +446,12 @@ include '../templates/header.php'; ?>
                                         <use xlink:href="<?= $target; ?>/img/steps/reset.svg#icon"/>
                                     </svg>
                                     <span>Сбросить фильтр</span>
+                                </div>
+                                <div class="step-img__apply j-apply">
+                                    <svg>
+                                        <use xlink:href="<?= $target; ?>/img/steps/reset.svg#icon"/>
+                                    </svg>
+                                    <span>Применить</span>
                                 </div>
                             </div>
                         </div>

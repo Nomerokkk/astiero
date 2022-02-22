@@ -268,3 +268,32 @@ $(function() {
         });
     }
 });
+
+
+/****************SEARCH***************/
+$('.j-search').on('input', function() {
+    let $this = $(this),
+        val = $this.val(),
+        $btn = $this.closest('.search').find('.j-search-clear');
+
+
+    if(val.length > 0) {
+        $this.addClass('active');
+        $btn.fadeIn(200);
+    } else {
+        $this.removeClass('active');
+        $btn.fadeOut(200);
+    }
+});
+
+$('.j-search-clear').on('click', function() {
+    let $this = $(this),
+        $input = $this.closest('.search').find('.j-search');
+
+    $input
+        .val('')
+        .removeClass('active')
+        .focus();
+        
+    $this.fadeOut(200);
+});

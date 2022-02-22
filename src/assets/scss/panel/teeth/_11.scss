@@ -1,0 +1,162 @@
+.jaw-item {
+    &--11 {
+        transform: translate(288.69px, 75.43px);
+        width: 16px;
+        .tooth {
+            // transform: translate(.2px, 1px);
+            transform: translate(-3.4px, 1px);
+        }
+        &.implant {
+            transform: translate(291px, 86px);
+            width: 11.5px;
+        }
+        &.abatment {
+            .tooth {
+                transform: translate(-4.2px, 0);
+            }
+        }
+        &.small {
+            transform: translate(286.2px, 115.5px);
+        }
+        &.retinirovannyj {
+            top: -24px;
+            left: .5px;
+        }
+        &.vremennaya_koronka {
+            .tooth {
+                left: 0;
+            }
+        }
+        &.kostnaya_plastika {
+            .tooth {
+                left: -1px;
+                top: -4px;
+            }
+        }
+
+        &.abatment,
+        &.ustanovka_implantata {
+            .tooth {
+                left: -1px;
+            }
+        }
+
+        // step1
+        &.poterya_kosti {
+            .tooth {
+                transform: translate(-1px, 12.8px);
+            }
+        }
+
+        &.nalet,
+        &.zubnoj_kamen,
+        &.parodontalnye_karmany,
+        &.karies_mezialnyj,
+        &.karies_distalnyj,
+        &.karies_yazychnyj,
+        &.karies_prisheechnyj,
+        &.vestibulyarnyj,
+        &.treshina_do_desny,
+        &.pulpit,
+        &.lechenie_kanalov_udovlit,
+        &.perelom_kornya,
+        &.viniry,
+        &.nakladka,
+        &.vkladka,
+        &.kyuretazh,
+        &.vremennaya_koronka {
+            .tooth {
+                transform: translate(-2.6px, .5px);
+            }
+        }
+        &.krovotochivost,
+        &.gnoj,
+        &.podvizhnost_zubov {
+            .tooth {
+                transform: translate(-2.8px, .7px);
+            }
+        }
+        &.koronka_razrushena {
+            .tooth {
+                transform: translate(-2.6px, .5px);
+            }
+        }
+        &.treshina_nizhe_desny {
+            .tooth {
+                transform: translate(-2.7px, .6px);
+            }
+        }
+        &.karies_oklyuzionnyj {
+            .tooth {
+                transform: translate(-2.6px, .5px);
+            }
+        }
+        &.lechenie_kanalov_neudovlit {
+            .tooth {
+                transform: translate(-2.6px, 1.2px);
+            }
+        }
+        &.slomannyj_instrument {
+            .tooth {
+                transform: translate(-2.9px, -1.7px);
+            }
+        }
+        &.gingivit {
+            .tooth {
+                transform: translate(-2.7px, .7px);
+            }
+        }
+        &.kornevaya_vkladka,
+        &.build_up {
+            .tooth {
+                transform: translate(.5px, 1px);
+            }
+        }
+        &.elajner {
+            .tooth {
+                transform: translate(-4.7px, .4px);
+            }
+        }
+
+        &.apikalnyj_periodontit {
+            .visual {
+                top: -2px;
+            }
+        }
+
+        &.brekety {
+            .visual {
+                transform: translate(-3px, 53px);
+            }
+        }
+
+        &.mini_implant {
+            .visual {
+                left: -8px;
+                top: 0;
+            }
+        }
+
+        &.retejner {
+            .visual {
+                transform: translate(-2.7px, 46.6px);
+            }
+        }
+
+        &.semnyj_protez {
+            .visual {
+                transform: translate(-.8px, 6.4px);
+            }
+        }
+
+        &.plastika_desny {
+            .visual {
+                transform: translate(-3.3px, 35.3px);
+            }
+        }
+
+        &.poterya_kosti {
+            transform: translate(286.4px, 106.6px);
+        }
+    }
+}
