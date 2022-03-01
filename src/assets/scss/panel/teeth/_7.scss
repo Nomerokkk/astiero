@@ -15,7 +15,8 @@
             transform: translate(201px, 88.5px);
             width: 10.54px;
         }
-        &.abatment {
+        &.abatment,
+        &.abatment_implant {
             .tooth {
                 transform: translate(-4.5px, 0);
             }
@@ -27,6 +28,7 @@
             top: -20.5px;
         }
         &.ustanovka_implantata,
+        &.abatment_implant,
         &.abatment {
             .tooth {
                 left: -1px;

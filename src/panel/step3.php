@@ -188,6 +188,11 @@ include '../templates/header.php'; ?>
                                         'dir' => 'abatment',
                                         'border' => 'implant',
                                     ],
+                                    7 => [
+                                        'title' => 'Абатмент + имплант',
+                                        'dir' => 'abatment_implant',
+                                        'border' => 'implant',
+                                    ],
                                 ],
                             ],
                             4 => [
