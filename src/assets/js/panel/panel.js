@@ -57,17 +57,6 @@ $('.j-view-password').on('click', function() {
     }
 });
 
-/***************DOCUMENTS**************/
-$('.j-input-document').on('click', function() {
-    $('.j-document-nav').addClass('active');
-});
-
-$('.j-document-btn').on('click', function(e) {
-    e.preventDefault();
-
-    $('.j-document-nav').removeClass('active');
-});
-
 
 /****************SELECT2*************/
 $('.j-select2').each(function() {

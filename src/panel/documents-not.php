@@ -87,16 +87,16 @@ include '../templates/header.php'; ?>
                     <div class="newdoc__tooltip-text">Чтобы отредактировать текст - нажмите на область</div>
                 </div>
                 <div class="newdoc__top-input input">
-                    <input class="j-input-document" type="text" placeholder="Название документа">
+                    <input type="text" placeholder="Название документа">
                 </div>
                 <div class="newdoc__nav j-document-nav">
-                    <button class="newdoc__btn btn btn--orange j-document-btn" type="submit">
+                    <button class="newdoc__btn btn btn--orange" type="submit">
                         Сохранить
                     </button>
                 </div>
             </div> 
             <div class="newdoc__textarea input">
-                <textarea class="j-input-document" placeholder="Текст документа">Диагностируйте все состояния пациента за секунды. Создавайте планы, которые автоматически объясняются. 
+                <textarea placeholder="Текст документа">Диагностируйте все состояния пациента за секунды. Создавайте планы, которые автоматически объясняются. 
 
 Диагностируйте все состояния пациента за секунды. Создавайте планы, которые автоматически объясняются. 
 
@@ -147,7 +147,7 @@ include '../templates/header.php'; ?>
 </textarea>
             </div> 
             <div class="newdoc__nav j-document-nav newdoc__nav--bottom">
-                <button class="newdoc__btn btn btn--orange j-document-btn" type="submit">
+                <button class="newdoc__btn btn btn--orange" type="submit">
                     Сохранить
                 </button>
                 <div class="sort newdoc__sort">
@@ -170,19 +170,19 @@ include '../templates/header.php'; ?>
                     <div class="newdoc__tooltip-text">Чтобы отредактировать текст - нажмите на область</div>
                 </div>
                 <div class="newdoc__top-input input">
-                    <input class="j-input-document" type="text" placeholder="Название документа">
+                    <input type="text" placeholder="Название документа">
                 </div>
                 <div class="newdoc__nav j-document-nav">
-                    <button class="newdoc__btn btn btn--orange j-document-btn" type="submit">
+                    <button class="newdoc__btn btn btn--orange" type="submit">
                         Сохранить
                     </button>
                 </div>
             </div> 
             <div class="newdoc__textarea input">
-                <textarea class="j-input-document" placeholder="Текст документа"></textarea>
+                <textarea placeholder="Текст документа"></textarea>
             </div> 
             <div class="newdoc__nav j-document-nav newdoc__nav--bottom">
-                <button class="newdoc__btn btn btn--orange j-document-btn" type="submit">
+                <button class="newdoc__btn btn btn--orange" type="submit">
                     Сохранить
                 </button>
                 <div class="sort newdoc__sort">

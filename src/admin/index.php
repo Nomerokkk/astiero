@@ -9,6 +9,7 @@ include '../templates/header.php'; ?>
                     <img src="<?= $target; ?>/img/msg/error.svg" alt="" loading="lazy">
                 </span>
                 Произошла ошибка при сохранении
+                Произошла ошибка при сохранении
             </div>
         </div>
         <div class="panel-message__item j-panel-message">

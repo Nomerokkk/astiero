@@ -108,16 +108,18 @@ $target = '../assets';
 							</div>
 						</div>
 						<div class="login login--panel">
-							<div class="btn btn--border login__btn" data-target="#login">
-								<div class="login__user">
-									<svg>
-										<use xlink:href="<?= $target; ?>/img/icons.svg#user"/>
-									</svg>
-								</div>
-								<div class="login__name">
-									Иван Иванов
-								</div>
-								<div class="login__arrow">
+							<div class="btn btn--border login__btn">
+								<a href="#" class="login__title">
+									<div class="login__user">
+										<svg>
+											<use xlink:href="<?= $target; ?>/img/icons.svg#user"/>
+										</svg>
+									</div>
+									<div class="login__name">
+										Иван Иванов
+									</div>
+								</a>
+								<div class="login__arrow" data-target="#login, .login__btn">
 									<svg>
 										<use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
 									</svg>
@@ -289,16 +291,18 @@ $target = '../assets';
 							</div>
 						</div>
 						<div class="login login--panel">
-							<div class="btn btn--border login__btn" data-target="#login">
-								<div class="login__user">
-									<svg>
-										<use xlink:href="<?= $target; ?>/img/icons.svg#user"/>
-									</svg>
-								</div>
-								<div class="login__name">
-									Иван Иванов
-								</div>
-								<div class="login__arrow">
+							<div class="btn btn--border login__btn">
+								<a href="#" class="login__title">
+									<div class="login__user">
+										<svg>
+											<use xlink:href="<?= $target; ?>/img/icons.svg#user"/>
+										</svg>
+									</div>
+									<div class="login__name">
+										Иван Иванов
+									</div>
+								</a>
+								<div class="login__arrow" data-target="#login, .login__btn">
 									<svg>
 										<use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
 									</svg>
@@ -431,16 +435,18 @@ $target = '../assets';
 							</div>
 						</div>
 						<div class="login login--panel">
-							<div class="btn btn--border login__btn" data-target="#login">
-								<div class="login__user">
-									<svg>
-										<use xlink:href="<?= $target; ?>/img/icons.svg#user"/>
-									</svg>
-								</div>
-								<div class="login__name">
-									Иван Иванов
-								</div>
-								<div class="login__arrow">
+							<div class="btn btn--border login__btn">
+								<a href="#" class="login__title">
+									<div class="login__user">
+										<svg>
+											<use xlink:href="<?= $target; ?>/img/icons.svg#user"/>
+										</svg>
+									</div>
+									<div class="login__name">
+										Иван Иванов
+									</div>
+								</a>
+								<div class="login__arrow" data-target="#login, .login__btn">
 									<svg>
 										<use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
 									</svg>
@@ -453,7 +459,7 @@ $target = '../assets';
 									</div>
 								</li>
 								<li><a href="settings.php" class="login__item"><span>Настройки</span></a></li>
-								<li><a href="/" class="login__item"><span>Выйти</span></a></li>
+								<li><a href="#exit-modal" data-fancybox class="login__item"><span>Выйти</span></a></li>
 							</ul>
 						</div>
 					</div>
@@ -514,16 +520,18 @@ $target = '../assets';
 						</a>
 					</div> -->
 					<div class="login login--panel">
-						<div class="btn btn--border login__btn" data-target="#login">
-							<div class="login__user">
-								<svg>
-									<use xlink:href="<?= $target; ?>/img/icons.svg#user"/>
-								</svg>
-							</div>
-							<div class="login__name">
-								Иван Иванов
-							</div>
-							<div class="login__arrow">
+						<div class="btn btn--border login__btn">
+							<a href="#" class="login__title">
+								<div class="login__user">
+									<svg>
+										<use xlink:href="<?= $target; ?>/img/icons.svg#user"/>
+									</svg>
+								</div>
+								<div class="login__name">
+									Иван Иванов
+								</div>
+							</a>
+							<div class="login__arrow" data-target="#login, .login__btn">
 								<svg>
 									<use xlink:href="<?= $target; ?>/img/icons.svg#arrow"/>
 								</svg>
@@ -536,7 +544,7 @@ $target = '../assets';
 								</div>
 							</li>
 							<li><a href="settings.php" class="login__item"><span>Настройки</span></a></li>
-							<li><a href="/" class="login__item"><span>Выйти</span></a></li>
+							<li><a href="#exit-modal" data-fancybox class="login__item"><span>Выйти</span></a></li>
 						</ul>
 					</div>
 				</div>

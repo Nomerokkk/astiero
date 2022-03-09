@@ -4,13 +4,10 @@ var $up = $('.j-up'),
 	$overlay = $('.j-overlay'),
 	$window = $(window),
 	$document = $(document);
-
-
+	
 
 /***************SUPPORT SVG SPRITE******************/
 svg4everybody();
-
-
 
 
 $(function() {
@@ -30,8 +27,10 @@ $(function() {
 		}
 	}
 	$up.on('click', function() {
-		$('body, html').animate({
-			scrollTop: 0,
+		gsap.to(window, {
+			duration: 1.5, 
+			scrollTo: 0, 
+			ease: Circ.easeInOut,
 		});
 	});
 
@@ -262,13 +261,11 @@ $(function() {
 
 	if(hash) {
 		gsap.to(window, {
-			duration: 2, 
+			duration: 1.5, 
 			scrollTo: $(hash).offset().top - $header.outerHeight() + 1, 
-			ease: Power4.easeOut
+			ease: Circ.easeInOut,
 		});
 	}
-
-
 
 
 	$link.on('click', function(e) {
@@ -278,9 +275,9 @@ $(function() {
 			offset = $(href).offset().top - $header.outerHeight() + 1;
 		
 		gsap.to(window, {
-			duration: 1, 
+			duration: 1.5, 
 			scrollTo: offset, 
-			ease: Power4.easeOut
+			ease: Circ.easeInOut,
 		});
 
 		$('.header-toggle').trigger('click');

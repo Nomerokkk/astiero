@@ -4,13 +4,13 @@
     right: 0;
     z-index: 100000;
     display: none;
-    font: 700 20px / 1 $font;
+    font: 700 16px / 1 $font;
     &__item {
-        height: 70px;
+        min-height: 70px;
+        padding: 10px 0 10px 10px;
         display: flex;
         align-items: center;
-        font-weight: 700;
-        margin-bottom: 28px;
+        margin: 0 0 28px;
         animation-duration: .5s !important;
         transition: .3s background ease;
         cursor: pointer;
@@ -20,7 +20,7 @@
         background: #34D64E;
         visibility: hidden;
         opacity: 0;
-        width: 284px;
+        width: 290px;
         &--error {
             background: $orange;
             &:hover {
@@ -45,5 +45,12 @@
 		display: flex;
 		align-items: center;
 	}
+}
 
+@media screen and (max-width: 767px) {
+    .panel-message {
+        &__item {
+            margin: 0 0 15px;
+        }
+    }   
 }

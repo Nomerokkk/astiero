@@ -135,16 +135,16 @@ include '../templates/header.php'; ?>
                     <div class="newdoc__tooltip-text">Чтобы отредактировать текст - нажмите на область</div>
                 </div>
                 <div class="newdoc__top-input input">
-                    <input class="j-input-document" type="text" placeholder="Название документа">
+                    <input type="text" placeholder="Название документа">
                 </div>
-                <div class="newdoc__nav j-document-nav">
+                <div class="newdoc__nav">
                     <button class="newdoc__btn btn btn--orange j-document-btn" type="submit">
                         Сохранить
                     </button>
                 </div>
             </div> 
             <div class="newdoc__textarea"></div> 
-            <div class="newdoc__nav j-document-nav newdoc__nav--bottom">
+            <div class="newdoc__nav newdoc__nav--bottom">
                 <button class="newdoc__btn btn btn--orange j-document-btn" type="submit">
                     Сохранить
                 </button>
@@ -168,16 +168,16 @@ include '../templates/header.php'; ?>
                     <div class="newdoc__tooltip-text">Чтобы отредактировать текст - нажмите на область</div>
                 </div>
                 <div class="newdoc__top-input input">
-                    <input class="j-input-document" type="text" placeholder="Название документа">
+                    <input type="text" placeholder="Название документа">
                 </div>
-                <div class="newdoc__nav j-document-nav">
+                <div class="newdoc__nav">
                     <button class="newdoc__btn btn btn--orange j-document-btn" type="submit">
                         Сохранить
                     </button>
                 </div>
             </div> 
             <div class="newdoc__textarea"></div> 
-            <div class="newdoc__nav j-document-nav newdoc__nav--bottom">
+            <div class="newdoc__nav newdoc__nav--bottom">
                 <button class="newdoc__btn btn btn--orange j-document-btn" type="submit">
                     Сохранить
                 </button>
