@@ -20,6 +20,23 @@ include '../templates/header.php'; ?>
                 Ваши данные успешно сохранены
             </div>
         </div>
+        <div class="panel-message__item j-panel-message panel-message__item--error">
+            <div class="panel-message__inner">
+                <span>
+                    <img src="<?= $target; ?>/img/msg/error.svg" alt="" loading="lazy">
+                </span>
+                Произошла ошибка при сохранении
+                Произошла ошибка при сохранении
+            </div>
+        </div>
+        <div class="panel-message__item j-panel-message">
+            <div class="panel-message__inner">
+                <span>
+                    <img src="<?= $target; ?>/img/msg/ok.svg" alt="" loading="lazy">
+                </span>
+                Ваши данные успешно сохранены
+            </div>
+        </div>
     </div>
             
     <div class="wrapper panel j-wrapper">

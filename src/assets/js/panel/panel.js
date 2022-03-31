@@ -155,12 +155,16 @@ $(function() {
     if($msg.length > 0) {
         show_message($msg[0]);
         show_message($msg[1]);
+        show_message($msg[2]);
+        show_message($msg[3]);
     }
 
 	setTimeout(()=>{
         if($msg.length > 0) {
             hide_message($msg[0]);
             hide_message($msg[1]);
+            hide_message($msg[2]);
+            hide_message($msg[3]);
         }
 	}, 3000);
 
