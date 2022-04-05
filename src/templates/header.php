@@ -64,11 +64,11 @@ $target = '../assets';
 						<a href="#period-modal" data-fancybox class="btn btn--orange header__promo">
 							Пробный период - осталось 10 дней
 						</a>
-						<a href="tel:+38 067 000 00 00" class="header__phone">
+						<a href="tel:example@gmail.com" class="header__phone">
 							<svg>
-								<use xlink:href="<?= $target; ?>/img/icons.svg#phone"/>
+								<use xlink:href="<?= $target; ?>/img/icons.svg#email"/>
 							</svg>
-							+38 067 000 00 00
+							example@gmail.com
 						</a>
 						<div class="lang">
 							<div class="lang__title" data-target="#lang">
@@ -232,11 +232,11 @@ $target = '../assets';
 					<li><a href="/#reviews" <?= ($page == 'home') ? 'data-scroll="#reviews"' : ''; ?>>Отзывы</a></li>
 				</ul>
 				<div class="menu__bottom">
-					<a href="tel:+38 067 000 00 00" class="header__phone">
+					<a href="tel:example@gmail.com" class="header__phone">
 						<svg>
-							<use xlink:href="<?= $target; ?>/img/icons.svg#phone"/>
+							<use xlink:href="<?= $target; ?>/img/icons.svg#email"/>
 						</svg>
-						+38 067 000 00 00
+						example@gmail.com
 					</a>
 				</div>
 			</div>
@@ -391,11 +391,11 @@ $target = '../assets';
 						<a href="#period-modal" data-fancybox class="btn btn--orange header__promo">
 							Пробный период - осталось 10 дней
 						</a>
-						<a href="tel:+38 067 000 00 00" class="header__phone">
+						<a href="tel:example@gmail.com" class="header__phone">
 							<svg>
-								<use xlink:href="<?= $target; ?>/img/icons.svg#phone"/>
+								<use xlink:href="<?= $target; ?>/img/icons.svg#email"/>
 							</svg>
-							+38 067 000 00 00
+							example@gmail.com
 						</a>
 						<div class="lang">
 							<div class="lang__title" data-target="#lang">
@@ -480,11 +480,11 @@ $target = '../assets';
 					<li><a href="/#reviews" <?= ($page == 'home') ? 'data-scroll="#reviews"' : ''; ?>>Отзывы</a></li>
 				</ul>
 				<div class="menu__bottom">
-					<a href="tel:+38 067 000 00 00" class="header__phone">
+					<a href="tel:example@gmail.com" class="header__phone">
 						<svg>
-							<use xlink:href="<?= $target; ?>/img/icons.svg#phone"/>
+							<use xlink:href="<?= $target; ?>/img/icons.svg#email"/>
 						</svg>
-						+38 067 000 00 00
+						example@gmail.com
 					</a>
 				</div>
 			</div>
@@ -508,11 +508,11 @@ $target = '../assets';
 					</ul>
 				</nav>
 				<div class="header__info">
-					<a href="tel:+38 067 000 00 00" class="header__phone">
+					<a href="tel:example@gmail.com" class="header__phone">
 						<svg>
-							<use xlink:href="<?= $target; ?>/img/icons.svg#phone"/>
+							<use xlink:href="<?= $target; ?>/img/icons.svg#email"/>
 						</svg>
-						+38 067 000 00 00
+						example@gmail.com
 					</a>
 					<!-- <div class="login">
 						<a href="login.php" class="btn btn--border login__btn">
@@ -601,11 +601,11 @@ $target = '../assets';
 					<li><a href="/#reviews" <?= ($page == 'home') ? 'data-scroll="#reviews"' : ''; ?>>Отзывы</a></li>
 				</ul>
 				<div class="menu__bottom">
-					<a href="tel:+38 067 000 00 00" class="header__phone">
+					<a href="tel:example@gmail.com" class="header__phone">
 						<svg>
-							<use xlink:href="<?= $target; ?>/img/icons.svg#phone"/>
+							<use xlink:href="<?= $target; ?>/img/icons.svg#email"/>
 						</svg>
-						+38 067 000 00 00
+						example@gmail.com
 					</a>
 				</div>
 			</div>

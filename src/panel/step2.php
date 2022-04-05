@@ -212,6 +212,11 @@ include '../templates/header.php'; ?>
                                         'dir' => 'retinirovannyj',
                                         'border' => 'normal',
                                     ],
+                                    4 => [
+                                        'title' => 'Установка имплантата (неправильное положение)',
+                                        'dir' => 'ustanovka_implantata_neprav',
+                                        'border' => 'implant',
+                                    ],
                                 ],
                             ],
                             4 => [

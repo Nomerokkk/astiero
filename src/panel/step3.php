@@ -108,41 +108,36 @@ include '../templates/header.php'; ?>
                                         'border' => 'implant',
                                     ],
                                     2 => [
-                                        'title' => 'Установка имплантата (неправильное положение)',
-                                        'dir' => 'ustanovka_implantata_neprav',
-                                        'border' => 'implant',
-                                    ],
-                                    3 => [
                                         'title' => 'Костная пластика',
                                         'dir' => 'kostnaya_plastika',
                                         'format' => 'png',
                                         'border' => 'normal',
                                     ],
-                                    4 => [
+                                    3 => [
                                         'title' => 'Пластика десны',
                                         'dir' => 'normal',
                                         'border' => 'normal',
                                         'visual' => 'plastika_desny'
                                     ],
-                                    5 => [
+                                    4 => [
                                         'title' => 'Синус-лифтинг (открытый / закрытый (крестальный))',
                                         'dir' => 'sinus',
                                         'border' => 'normal',
                                         'sinus' => 'two',
                                     ],
-                                    6 => [
+                                    5 => [
                                         'title' => 'Синус-лифтинг (открытый / закрытый (левый))',
                                         'dir' => 'sinus',
                                         'border' => 'normal',
                                         'sinus' => 'right',
                                     ],
-                                    7 => [
+                                    6 => [
                                         'title' => 'Синус-лифтинг (открытый / закрытый (правый))',
                                         'dir' => 'sinus',
                                         'border' => 'normal',
                                         'sinus' => 'left',
                                     ],
-                                    8 => [
+                                    7 => [
                                         'title' => 'Хирургический шаблон',
                                         'dir' => 'hirurgicheskij_shablon',
                                         'border' => 'small',
